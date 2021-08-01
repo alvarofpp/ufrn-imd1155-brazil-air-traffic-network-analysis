@@ -24,3 +24,4 @@ class GraphView(View):
                 nx.diameter(graph),
                 nx.radius(graph)
             ))
+            # TODO Whom are in the diameter

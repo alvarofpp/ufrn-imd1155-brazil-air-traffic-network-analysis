@@ -17,20 +17,41 @@ def get_views() -> List:
     return [
         GraphView(),
         FoliumView(),
+        # TODO Periphery
+        # TODO Degree Centrality
+        # TODO Betweenness Centrality
     ]
+
+
+def format_mode(option: int):
+    return MODES[option]
+
+
+MODES = {
+    1: 'Usar grafos existentes no app',
+    2: 'Importar meu grafo',
+}
 
 
 def main():
     st.title("Brazil air traffic network analysis")
     IntroView().render()
     data = get_data()
+    data_mode_selected = st.selectbox('Selecione a base', options=list(MODES.keys()), format_func=format_mode)
+    graph = None
 
-    graph_selected = st.selectbox('Selecione o ano', data.keys())
-    graph = data[graph_selected]
+    if data_mode_selected == 1:
+        graph_selected = st.selectbox('Selecione o ano', data.keys())
+        graph = data[graph_selected]
+    else:
+        file_uploaded = st.file_uploader('Importe seu grafo', type='graphml')
+        if file_uploaded:
+            graph = nx.parse_graphml(file_uploaded.getbuffer())
 
-    for page in get_views():
-        page.render(graph)
-        st.markdown('----------')
+    if graph:
+        for page in get_views():
+            page.render(graph)
+            st.markdown('----------')
 
 
 if __name__ == "__main__":
