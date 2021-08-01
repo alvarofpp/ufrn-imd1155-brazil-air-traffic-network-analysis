@@ -3,7 +3,7 @@ from .View import View
 
 
 class IntroView(View):
-    def render(self):
+    def render(self, graph=None):
         st.markdown("""
         This work has as purpose to analyze the air traffic in Brazil.
         
