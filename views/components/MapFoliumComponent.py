@@ -8,7 +8,8 @@ class MapFoliumComponent(Component):
     def __init__(self,
                  draw_edges=False,
                  peripheries=None,
-                 whom_diameter=None
+                 whom_diameter=None,
+                 width=100
                  ):
         super().__init__()
         self.quartile_1 = 0.0
@@ -17,6 +18,7 @@ class MapFoliumComponent(Component):
         self.draw_edges = draw_edges
         self.peripheries = peripheries
         self.whom_diameter = whom_diameter
+        self.width = width
 
         if peripheries is not None:
             self.peripheries = {periphery: {} for periphery in peripheries}
@@ -54,7 +56,8 @@ class MapFoliumComponent(Component):
         map = folium.Map(
             location=[-5.826592, -35.212558],
             zoom_start=3,
-            tiles='OpenStreetMap'
+            tiles='OpenStreetMap',
+            width='{}%'.format(self.width)
         )
 
         # Adds nodes

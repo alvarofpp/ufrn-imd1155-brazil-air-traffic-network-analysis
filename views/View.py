@@ -1,9 +1,17 @@
 import abc
+import streamlit as st
 
 
 class View(abc.ABC):
     def __init__(self):
-        pass
+        self._methods = [
+            'render',
+        ]
+        self._check_class()
+        self.render_component = st
 
-    def render(self, graph=None):
-        pass
+    def _check_class(self):
+        methods = [method for method in dir(self) if method in self._methods]
+        if len(methods) != len(self._methods):
+            diff_methods = set(self._methods).difference(methods)
+            raise NotImplemented('you must implement the methods: {}.'.format(', '.join(diff_methods)))
