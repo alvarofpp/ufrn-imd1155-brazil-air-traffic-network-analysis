@@ -1,7 +1,9 @@
 from typing import List, Dict
 import networkx as nx
 import streamlit as st
-from views import *
+from views import IntroView, GraphView, FoliumView
+from views.components import SelectComponent
+from utils.constants import *
 
 
 @st.cache(allow_output_mutation=True)
@@ -23,28 +25,23 @@ def get_views() -> List:
     ]
 
 
-def format_mode(option: int):
-    return MODES[option]
-
-
-MODES = {
-    1: 'Usar grafos existentes no app',
-    2: 'Importar meu grafo',
-}
-
-
 def main():
-    st.title("Brazil air traffic network analysis")
+    st.title('Brazil air traffic network analysis')
     IntroView().render()
     data = get_data()
-    data_mode_selected = st.selectbox('Selecione a base', options=list(MODES.keys()), format_func=format_mode)
+
+    st.sidebar.markdown('You can use a existent graph or import your graph to app.')
+    data_mode_selected = SelectComponent({
+        BASE_APP: 'Use existent graphs in the app',
+        BASE_MY_GRAPH: 'Import my graph',
+    }).render('Select the base')
     graph = None
 
-    if data_mode_selected == 1:
-        graph_selected = st.selectbox('Selecione o ano', data.keys())
+    if data_mode_selected == BASE_APP:
+        graph_selected = st.sidebar.selectbox('Select the year', data.keys())
         graph = data[graph_selected]
     else:
-        file_uploaded = st.file_uploader('Importe seu grafo', type='graphml')
+        file_uploaded = st.sidebar.file_uploader('Import your graph', type='graphml')
         if file_uploaded:
             graph = nx.parse_graphml(file_uploaded.getbuffer())
 
