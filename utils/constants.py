@@ -1,0 +1,2 @@
+BASE_APP = 1
+BASE_MY_GRAPH = 2
