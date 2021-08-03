@@ -18,7 +18,7 @@ def get_data() -> Dict:
 def get_views() -> List:
     return [
         GraphView(),
-        FoliumView(),
+        # FoliumView(),
         # TODO Periphery
         # TODO Degree Centrality
         # TODO Betweenness Centrality
@@ -34,7 +34,9 @@ def mode_my_graph():
 
     if graph:
         for page in get_views():
-            page.render(graph)
+            page.render({
+                'my_graph': graph,
+            })
             st.markdown('----------')
 
 
@@ -46,39 +48,15 @@ def mode_app(data):
     num_columns = sum(graphs.values())
 
     if num_columns > 0:
-        st.markdown(graphs)
-        st.markdown(num_columns)
         width = 100 / num_columns
+        graphs_data = {year: data[year] for year, value in graphs.items() if value}
 
         for page in get_views():
-            cols = st.beta_columns(num_columns)
             if type(page) is FoliumView:
                 page.width = width
 
-            column_count = 0
-
-            for year, value in graphs.items():
-                if not value:
-                    continue
-
-                page.render_component = cols[column_count]
-                page.render(data[year])
-                column_count += 1
+            page.render(graphs_data)
             st.markdown('----------')
-
-        # for year, value in graphs.items():
-        #     if not value:
-        #         continue
-        #
-        #     for page in get_views():
-        #         page.render_component = cols[column_count]
-        #
-        #         if type(page) is GraphView:
-        #             page.width = width
-        #
-        #         page.render(data[year])
-        #         cols[column_count].markdown('----------')
-        #     column_count += 1
 
 
 def main():
@@ -97,18 +75,9 @@ def main():
     }).render('Select the base')
 
     if data_mode_selected == BASE_APP:
-        # graph_selected = st.sidebar.selectbox('Select the year', data.keys())
         mode_app(data)
     else:
         mode_my_graph()
-    #     file_uploaded = st.sidebar.file_uploader('Import your graph', type='graphml')
-    #     if file_uploaded:
-    #         graph = nx.parse_graphml(file_uploaded.getbuffer())
-    #
-    # if graph:
-    #     for page in get_views():
-    #         page.render(graph)
-    #         st.markdown('----------')
 
 
 if __name__ == "__main__":
