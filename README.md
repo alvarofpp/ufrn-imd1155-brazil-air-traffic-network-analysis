@@ -1,23 +1,17 @@
 # ufrn-imd1155-brazil-air-traffic-network-analysis
+[![Open in Streamlit](https://img.shields.io/badge/-Streamlit-262730?style=for-the-badge&labelColor=000000&logo=Streamlit&logoColor=white)](#)
 
-This work has as purpose to analyze under different metrics the air traffic in Brazil. Besides that, it makes it possible upload your own dataset (.graphml) and see all these analyses applied to him. Have fun!
+This work has as purpose to analyze under different metrics the air traffic in Brazil. Besides that, it makes it possible upload your own dataset (`.graphml`) and see all these analyses applied to him. Have fun!
 
 Work of undergraduate course about Network Analysis (IMD1155) of Bachelor's degree in Information Technology from the Federal University of Rio Grande do Norte (UFRN), with [Ivanovitch Medeiros Dantas da Silva](https://github.com/ivanovitchm) as professor.
 
-
 Group:
-
--  [Álvaro Ferreira Pires de Paiva](https://github.com/alvarofpp)
-
-- Enrolment: 2016039162
-
-- E-mail: alvarofepipa@gmail.com
-
--  [Marcos Vinícius Rêgo Freire](https://github.com/mvinnicius22)
-
-- Enrolment: 20210053533
-
-- E-mail: mvinnicius22@hotmail.com
+- [Álvaro Ferreira Pires de Paiva](https://github.com/alvarofpp)
+  - Enrolment: 2016039162
+  - E-mail: alvarofepipa@gmail.com
+- [Marcos Vinícius Rêgo Freire](https://github.com/mvinnicius22)
+  - Enrolment: 20210053533
+  - E-mail: mvinnicius22@hotmail.com
 
 
 You cand find a detailed approach of these metrics above:
