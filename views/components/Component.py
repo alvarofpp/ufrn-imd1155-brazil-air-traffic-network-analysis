@@ -1,4 +1,5 @@
 import abc
+import streamlit as st
 
 
 class Component(abc.ABC):
@@ -7,6 +8,7 @@ class Component(abc.ABC):
             'render',
         ]
         self._check_class()
+        self.render_component = st
 
     def _check_class(self):
         methods = [method for method in dir(self) if method in self._methods]

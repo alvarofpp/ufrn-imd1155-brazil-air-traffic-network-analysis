@@ -1,10 +1,10 @@
 from .Component import Component
 import folium
-from folium import folium, plugins
+from folium import plugins
 from streamlit_folium import folium_static
 
 
-class MapFoliumComponent(Component):
+class MapMultiLayerComponent(Component):
     def __init__(self,
                  draw_edges=False,
                  peripheries=None,
@@ -28,6 +28,9 @@ class MapFoliumComponent(Component):
         self.draw_map(graph)
 
     def define_quartiles(self, graph):
+        if not self.draw_edges:
+            return
+
         # Sort weights
         edges_weight = sorted(graph.edges(data=True), key=lambda edge: edge[2]['flight_count'], reverse=True)
 
@@ -49,7 +52,7 @@ class MapFoliumComponent(Component):
 
         return 3
 
-    def draw(self, graphs):
+    def draw_map(self, graphs):
         map = folium.Map(
             location=[-5.826592, -35.212558],
             zoom_start=3,
@@ -57,33 +60,21 @@ class MapFoliumComponent(Component):
         )
 
         fg = folium.FeatureGroup(name="groups")
-        m.add_child(fg)
+        map.add_child(fg)
 
-        g1 = plugins.FeatureGroupSubGroup(fg, "group1")
-        m.add_child(g1)
+        groups = {}
+        for year, graph in graphs.items():
+            groups[year] = plugins.FeatureGroupSubGroup(fg, year)
+            self.draw_nodes(groups[year], graph)
+            self.draw_lines(groups[year], graph)
+            map.add_child(groups[year])
 
-        g2 = plugins.FeatureGroupSubGroup(fg, "group2")
-        m.add_child(g2)
+        folium.LayerControl(collapsed=False).add_to(map)
 
-        folium.Marker([-1, -1]).add_to(g1)
-        folium.Marker([1, 1]).add_to(g1)
+        # Call to render Folium map in Streamlit
+        folium_static(map)
 
-        folium.Marker([-1, 1]).add_to(g2)
-        folium.Marker([1, -1]).add_to(g2)
-
-        folium.LayerControl(collapsed=False).add_to(m)
-
-        m
-
-    def draw_map(self, graph):
-        # TODO find center among periphery or diameter
-        map = folium.Map(
-            location=[-5.826592, -35.212558],
-            zoom_start=3,
-            tiles='OpenStreetMap'
-        )
-
-        # Adds nodes
+    def draw_nodes(self, map, graph):
         for code in graph.nodes():
             node = graph.nodes()[code]
             color = '#2980b9'
@@ -101,37 +92,20 @@ class MapFoliumComponent(Component):
                           radius=10,
                           color=color).add_to(map)
 
-        # Adds edges
-        if self.draw_edges:
-            for edge in graph.edges(data=True):
-                node_first = graph.nodes[edge[0]]
-                node_second = graph.nodes[edge[1]]
-                loc = [
-                    (node_first['latitude'], node_first['longitude']),
-                    (node_second['latitude'], node_second['longitude']),
-                ]
+    def draw_lines(self, map, graph):
+        if not self.draw_edges:
+            return
 
-                folium.PolyLine(loc,
-                                color='red',
-                                weight=self.weight_line(edge[2]['flight_count']),
-                                opacity=0.6
-                                ).add_to(map)
+        for edge in graph.edges(data=True):
+            node_first = graph.nodes[edge[0]]
+            node_second = graph.nodes[edge[1]]
+            loc = [
+                (node_first['latitude'], node_first['longitude']),
+                (node_second['latitude'], node_second['longitude']),
+            ]
 
-        # Render periphery nodes
-        if self.peripheries is not None:
-            text = "\n".join(
-                ["- {} - {} ({})".format(code, periphery['name'], periphery['country'])
-                 for code, periphery in self.peripheries.items()]
-            )
-            self.render_component.markdown(text)
-
-        # Render diameter nodes
-        if self.whom_diameter is not None:
-            text = "\n".join(
-                ["- {} - {} ({})".format(code, who['name'], who['country'])
-                 for code, who in self.whom_diameter.items()]
-            )
-            self.render_component.markdown(text)
-
-        # Call to render Folium map in Streamlit
-        folium_static(map)
+            folium.PolyLine(loc,
+                            color='red',
+                            weight=self.weight_line(edge[2]['flight_count']),
+                            opacity=0.6
+                            ).add_to(map)

@@ -3,7 +3,7 @@ from .View import View
 from views.components import MapFoliumComponent
 
 
-class FoliumView(View):
+class DiameterView(View):
     def __init__(self, width: float = 100):
         super().__init__()
         self.width = width
@@ -11,8 +11,8 @@ class FoliumView(View):
     def render(self, graph):
         if nx.is_connected(graph):
             self.render_component.markdown("""
-            ### Diameter
-            """)
+                        ### Diameter
+                        """)
             # print(nx.eccentricity(graph).items())
             diameter = nx.diameter(graph)
             whom_diameter = [code for code, value in nx.eccentricity(graph).items() if value == diameter]
