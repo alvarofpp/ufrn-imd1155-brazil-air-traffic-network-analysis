@@ -21,7 +21,7 @@ class GraphView(View):
 
         dataframe = pd.DataFrame.from_dict(data, orient='index')
 
-        text = 'Você pode visualizar os dados sobre o{} grafo{} logo abaixo:'
+        text = 'You can view the data about the{} graph{} below:'
         if len(graphs) > 1:
             text = text.format('s', 's')
         text = text.format('', '')
