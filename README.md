@@ -1,39 +1,32 @@
 # ufrn-imd1155-brazil-air-traffic-network-analysis
 
-PRIMEIRO GRUPO DE MÉTRICAS
+This work has as purpose to analyze under different metrics the air traffic in Brazil. Besides that, it makes it possible upload your own dataset (.graphml) and see all these analyses applied to him. Have fun!
 
-- PERIFERIA
-nx.periphery(g)
+Work of undergraduate course about Network Analysis (IMD1155) of Bachelor's degree in Information Technology from the Federal University of Rio Grande do Norte (UFRN), with [Ivanovitch Medeiros Dantas da Silva](https://github.com/ivanovitchm) as professor.
 
-- DIAMETRO
-# the diameter of networks is the maximum eccentricy
-print("Diameter of network (g): {}".format(nx.diameter(g)))
 
-# whom are in the diamter
-print([k for k,v in nx.eccentricity(g).items() if v == nx.diameter(g)])
+Group:
 
-SEGUNDO GRUPO DE MÉTRICAS
+-  [Álvaro Ferreira Pires de Paiva](https://github.com/alvarofpp)
 
-4.1 Degree Centrality
-4.3 Betweenness Centrality
+- Enrolment: 2016039162
 
-# k-core of the network
-# 1-core
-# 2-core
-# 3-core
-set([v for k,v in nx.core_number(g).items()])
-# 
-# Change the variable core to visualize the nodes in k-core
-# Note that 0-core is the all network
-core = 3
-for i in nx.k_core(g,core):
-  print(i)
-# 
-# Change the variable shell to visualize the nodes in k-shell
-# Note that vertices in k-shell are member of k-core, however they are not member of (k+1)-core
-shell = 3
-for i in nx.k_shell(g,shell):
-  print(i)
+- E-mail: alvarofepipa@gmail.com
 
-# How many k-cores does this network have?
-set([v for k,v in nx.core_number(g2).items()])
+-  [Marcos Vinícius Rêgo Freire](https://github.com/mvinnicius22)
+
+- Enrolment: 20210053533
+
+- E-mail: mvinnicius22@hotmail.com
+
+
+You cand find a detailed approach of these metrics above:
+
+| Metric | Description |
+| --- | --- |
+| `Diameter` |[Diameter](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=5yquhZpJ1DaF&line=2&uniqifier=1) it is the **shortest** distance between the two most distant nodes in the network|
+| `Periphery` | the [Periphery](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=aaV5juQB4kCW&line=1&uniqifier=1) of a network is a set of all nodes whose eccentriciy is **equals** the diameter|
+|`Degree Centrality` | [Degree Centrality](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=GfPALZ3QUtlP&line=3&uniqifier=1) assigns an importance score based simply on the **number of links** held by each node.|
+|`Betweenness Centrality` | [Betweenness Centrality](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=vqlupG50r8Yf) shows which nodes are **‘bridges’** between nodes in a network.|
+|`k-core` | A [k-core](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=vqlupG50r8Yf) in a network is a subset of its nodes in which all nodes have at least **k** connections to each other.|
+|`k-shell` | The [k-shell](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=PgYUzep5KqrU&line=5&uniqifier=1) of a graph G is the set of all nodes belonging to the k–core of G but not to the **(k+1)**–core.|
