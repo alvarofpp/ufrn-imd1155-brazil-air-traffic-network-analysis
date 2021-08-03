@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d4" for="edge" attr.name="flight_count" attr.type="long" />
+  <key id="d3" for="node" attr.name="longitude" attr.type="double" />
+  <key id="d2" for="node" attr.name="latitude" attr.type="double" />
+  <key id="d1" for="node" attr.name="country" attr.type="string" />
+  <key id="d0" for="node" attr.name="name" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="KDFW">
+      <data key="d0">DALLAS &amp; FORT WORTH, TEXAS</data>
+      <data key="d1">ESTADOS UNIDOS DA AMÉRICA</data>
+      <data key="d2">32.896801</data>
+      <data key="d3">-97.038002</data>
+    </node>
+    <edge source="SBCG" target="SBCG">
+      <data key="d4">7</data>
+    </edge>
+  </graph>
+</graphml>
