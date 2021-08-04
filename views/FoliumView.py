@@ -8,5 +8,5 @@ class FoliumView(View):
         ## Nodes visualization 
         """)
 
-        map_component = MapMultiLayerComponent(peripheries=True, whom_diameter=True)
+        map_component = MapMultiLayerComponent(peripheries=True, whom_diameter=True, minimap=True)
         map_component.render(graphs)
