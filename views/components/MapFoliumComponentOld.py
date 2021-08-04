@@ -4,7 +4,7 @@ from folium import folium, plugins
 from streamlit_folium import folium_static
 
 
-class MapFoliumComponent(Component):
+class MapFoliumComponentOld(Component):
     def __init__(self,
                  draw_edges=False,
                  peripheries=None,

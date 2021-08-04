@@ -1,111 +1,95 @@
-from .Component import Component
 import folium
 from folium import plugins
-from streamlit_folium import folium_static
+import networkx as nx
+from .MapFoliumComponent import MapFoliumComponent
 
 
-class MapMultiLayerComponent(Component):
+class MapMultiLayerComponent(MapFoliumComponent):
     def __init__(self,
-                 draw_edges=False,
-                 peripheries=None,
-                 whom_diameter=None
+                 peripheries=False,
+                 whom_diameter=False
                  ):
         super().__init__()
-        self.quartile_1 = 0.0
-        self.quartile_2 = 0.0
-        self.quartile_3 = 0.0
-        self.draw_edges = draw_edges
         self.peripheries = peripheries
         self.whom_diameter = whom_diameter
 
-        if peripheries is not None:
-            self.peripheries = {periphery: {} for periphery in peripheries}
-        if whom_diameter is not None:
-            self.whom_diameter = {who: {} for who in whom_diameter}
+    def make_map(self, graphs):
+        self.draw_nodes(graphs)
 
-    def render(self, graph):
-        self.define_quartiles(graph)
-        self.draw_map(graph)
+        if self.peripheries:
+            self.draw_peripheries(graphs)
+        if self.whom_diameter:
+            self.draw_whom_diameter(graphs)
 
-    def define_quartiles(self, graph):
-        if not self.draw_edges:
+        folium.LayerControl(collapsed=False).add_to(self.map)
+
+    def draw_nodes(self, graphs):
+        color = '#2980b9'
+        label_group = 'nodes'
+
+        feature_group = folium.FeatureGroup(name=label_group)
+        self.map.add_child(feature_group)
+
+        for label, graph in graphs.items():
+            subgroup = plugins.FeatureGroupSubGroup(feature_group, label_group + '-' + label)
+            self.map.add_child(subgroup)
+
+            for code in graph.nodes():
+                node = graph.nodes()[code]
+
+                folium.Circle((node['latitude'], node['longitude']),
+                              popup='<b>{}</b> - <i>{} ({})</i>'.format(code, node['name'], node['country']),
+                              tooltip=code,
+                              radius=10,
+                              color=color).add_to(subgroup)
+
+    def draw_peripheries(self, graphs):
+        color = '#e74c3c'
+        label_group = 'periphery'
+        graphs_filtered = {year: graph for year, graph in graphs.items() if nx.is_connected(graph)}
+
+        if len(graphs_filtered) == 0:
             return
 
-        # Sort weights
-        edges_weight = sorted(graph.edges(data=True), key=lambda edge: edge[2]['flight_count'], reverse=True)
+        feature_group = folium.FeatureGroup(name=label_group)
+        self.map.add_child(feature_group)
 
-        # Get maximum weight
-        max_weight = edges_weight[0][2]['flight_count']
+        for label, graph in graphs_filtered.items():
+            subgroup = plugins.FeatureGroupSubGroup(feature_group, label_group + '-' + label)
+            self.map.add_child(subgroup)
 
-        # Binds
-        self.quartile_1 = max_weight * 0.1
-        self.quartile_2 = max_weight * 0.2
-        self.quartile_3 = max_weight * 0.4
+            for code in nx.periphery(graph):
+                node = graph.nodes()[code]
 
-    def weight_line(self, weight):
-        if weight < self.quartile_1:
-            return 0.1
-        if weight < self.quartile_2:
-            return 0.25
-        if weight < self.quartile_3:
-            return 1
+                folium.Circle((node['latitude'], node['longitude']),
+                              popup='<b>{}</b> - <i>{} ({})</i>'.format(code, node['name'], node['country']),
+                              tooltip=code,
+                              radius=10,
+                              color=color).add_to(subgroup)
 
-        return 3
+    def draw_whom_diameter(self, graphs):
+        color = '#e74c3c'
+        label_group = 'whom_diameter'
+        graphs_filtered = {year: graph for year, graph in graphs.items() if nx.is_connected(graph)}
 
-    def draw_map(self, graphs):
-        map = folium.Map(
-            location=[-5.826592, -35.212558],
-            zoom_start=3,
-            tiles='OpenStreetMap'
-        )
-
-        fg = folium.FeatureGroup(name="groups")
-        map.add_child(fg)
-
-        groups = {}
-        for year, graph in graphs.items():
-            groups[year] = plugins.FeatureGroupSubGroup(fg, year)
-            self.draw_nodes(groups[year], graph)
-            self.draw_lines(groups[year], graph)
-            map.add_child(groups[year])
-
-        folium.LayerControl(collapsed=False).add_to(map)
-
-        # Call to render Folium map in Streamlit
-        folium_static(map)
-
-    def draw_nodes(self, map, graph):
-        for code in graph.nodes():
-            node = graph.nodes()[code]
-            color = '#2980b9'
-
-            if self.peripheries is not None and code in self.peripheries:
-                color = '#e74c3c'
-                self.peripheries[code] = node
-            if self.whom_diameter is not None and code in self.whom_diameter:
-                color = '#f1c40f'
-                self.whom_diameter[code] = node
-
-            folium.Circle((node['latitude'], node['longitude']),
-                          popup='<b>{}</b> - <i>{} ({})</i>'.format(code, node['name'], node['country']),
-                          tooltip=code,
-                          radius=10,
-                          color=color).add_to(map)
-
-    def draw_lines(self, map, graph):
-        if not self.draw_edges:
+        if len(graphs_filtered) == 0:
             return
 
-        for edge in graph.edges(data=True):
-            node_first = graph.nodes[edge[0]]
-            node_second = graph.nodes[edge[1]]
-            loc = [
-                (node_first['latitude'], node_first['longitude']),
-                (node_second['latitude'], node_second['longitude']),
-            ]
+        feature_group = folium.FeatureGroup(name=label_group)
+        self.map.add_child(feature_group)
 
-            folium.PolyLine(loc,
-                            color='red',
-                            weight=self.weight_line(edge[2]['flight_count']),
-                            opacity=0.6
-                            ).add_to(map)
+        for label, graph in graphs_filtered.items():
+            subgroup = plugins.FeatureGroupSubGroup(feature_group, label_group + '-' + label)
+            self.map.add_child(subgroup)
+
+            diameter = nx.diameter(graph)
+            whom_diameter = [code for code, value in nx.eccentricity(graph).items() if value == diameter]
+
+            for code in whom_diameter:
+                node = graph.nodes()[code]
+
+                folium.Circle((node['latitude'], node['longitude']),
+                              popup='<b>{}</b> - <i>{} ({})</i>'.format(code, node['name'], node['country']),
+                              tooltip=code,
+                              radius=10,
+                              color=color).add_to(subgroup)

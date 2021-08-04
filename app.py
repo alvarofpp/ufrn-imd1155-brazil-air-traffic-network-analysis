@@ -1,10 +1,9 @@
 from typing import List, Dict
 import networkx as nx
 import streamlit as st
-from views import IntroView, GraphView, PeripheryView
+from views import IntroView, GraphView, FoliumView
 from views.components import SelectComponent
 from utils.constants import *
-import streamlit.components.v1 as components
 
 
 @st.cache(allow_output_mutation=True)
@@ -26,8 +25,7 @@ def get_stub_graphml() -> str:
 def get_views() -> List:
     return [
         GraphView(),
-        PeripheryView(),
-        # TODO Periphery
+        FoliumView(),
         # TODO Degree Centrality
         # TODO Betweenness Centrality
     ]
@@ -60,13 +58,9 @@ def mode_app(data):
 
     if num_columns > 0:
         width = 100 / num_columns
-        print(width)
         graphs_data = {year: data[year] for year, value in graphs.items() if value}
 
         for page in get_views():
-            if type(page) is PeripheryView:
-                page.width = width
-
             page.render(graphs_data)
             st.markdown('----------')
 
