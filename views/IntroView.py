@@ -1,10 +1,12 @@
-import streamlit as st
 from .View import View
 
 
 class IntroView(View):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
     def render(self, graph=None):
-        st.sidebar.markdown("""
+        self.render_component.markdown("""
         his work has as purpose to analyze under different metrics the air traffic in Brazil. Besides that, it makes it possible upload your own dataset (`.graphml`) and see all these analyses applied to him. Have fun!
 
         Work of undergraduate course about Network Analysis (IMD1155) of Bachelor's degree in Information Technology from

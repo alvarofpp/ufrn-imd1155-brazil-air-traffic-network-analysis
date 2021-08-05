@@ -1,7 +1,7 @@
 import pandas as pd
 import networkx as nx
 from .View import View
-from .components import TableComponent
+from views.components import TableComponent
 
 
 class GraphView(View):

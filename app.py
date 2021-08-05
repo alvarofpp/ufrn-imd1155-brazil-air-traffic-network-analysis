@@ -70,7 +70,7 @@ def main():
         layout='wide'
     )
     st.title('Brazil air traffic network analysis')
-    IntroView().render()
+    IntroView(render_component=st.sidebar).render()
     data = get_data()
 
     st.sidebar.markdown('You can use a existent graph or import your graph to app.')
