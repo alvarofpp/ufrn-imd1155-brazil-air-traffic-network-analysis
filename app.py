@@ -57,7 +57,6 @@ def mode_app(data):
     num_columns = sum(graphs.values())
 
     if num_columns > 0:
-        width = 100 / num_columns
         graphs_data = {year: data[year] for year, value in graphs.items() if value}
 
         for page in get_views():
@@ -78,7 +77,7 @@ def main():
     data_mode_selected = SelectComponent({
         BASE_APP: 'Use existent graphs in the app',
         BASE_MY_GRAPH: 'Import my graph',
-    }).render('Select the base')
+    }, render_component=st.sidebar).render('Select the base')
 
     if data_mode_selected == BASE_APP:
         mode_app(data)
