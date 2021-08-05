@@ -1,8 +1,8 @@
+import networkx as nx
 import folium
 from folium import plugins
-import networkx as nx
-from .MapFoliumComponent import MapFoliumComponent
 from utils.colors import *
+from .MapFoliumComponent import MapFoliumComponent
 
 
 class MapMultiLayerComponent(MapFoliumComponent):

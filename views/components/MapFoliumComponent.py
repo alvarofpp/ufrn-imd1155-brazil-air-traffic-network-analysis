@@ -1,7 +1,7 @@
 import folium
 from typing import Dict
-from folium import folium, plugins
 from .Component import Component
+from folium import folium, plugins
 from streamlit_folium import folium_static
 
 
@@ -16,8 +16,8 @@ class MapFoliumComponent(Component):
         'tiles': 'OpenStreetMap',
     }
 
-    def __init__(self, map_config: Dict = None, minimap: bool = False):
-        super().__init__()
+    def __init__(self, map_config: Dict = None, minimap: bool = False, **kwargs):
+        super().__init__(**kwargs)
         self.map_config = self._map_config_default.copy()
         self.map_config.update(map_config if map_config is not None else {})
         self.map = folium.Map(**self.map_config)
