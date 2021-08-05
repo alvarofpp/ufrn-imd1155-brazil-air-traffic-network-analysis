@@ -14,13 +14,13 @@ Group:
   - E-mail: mvinnicius22@hotmail.com
 
 
-You cand find a detailed approach of these metrics above:
+You can find a detailed approach of these metrics above:
 
 | Metric | Description |
 | --- | --- |
-| `Diameter` |[Diameter](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=5yquhZpJ1DaF&line=2&uniqifier=1) it is the **shortest** distance between the two most distant nodes in the network|
-| `Periphery` | the [Periphery](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=aaV5juQB4kCW&line=1&uniqifier=1) of a network is a set of all nodes whose eccentriciy is **equals** the diameter|
-|`Degree Centrality` | [Degree Centrality](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=GfPALZ3QUtlP&line=3&uniqifier=1) assigns an importance score based simply on the **number of links** held by each node.|
-|`Betweenness Centrality` | [Betweenness Centrality](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=vqlupG50r8Yf) shows which nodes are **‘bridges’** between nodes in a network.|
-|`k-core` | A [k-core](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=vqlupG50r8Yf) in a network is a subset of its nodes in which all nodes have at least **k** connections to each other.|
-|`k-shell` | The [k-shell](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=PgYUzep5KqrU&line=5&uniqifier=1) of a graph G is the set of all nodes belonging to the k–core of G but not to the **(k+1)**–core.|
+| `Diameter` | [Diameter](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=5yquhZpJ1DaF&line=2&uniqifier=1) it is the **shortest** distance between the two most distant nodes in the network. |
+| `Periphery` | The [Periphery](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=aaV5juQB4kCW&line=1&uniqifier=1) of a network is a set of all nodes whose eccentriciy is **equals** the diameter. |
+| `Degree Centrality` | [Degree Centrality](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=GfPALZ3QUtlP&line=3&uniqifier=1) assigns an importance score based simply on the **number of links** held by each node. |
+| `Betweenness Centrality` | [Betweenness Centrality](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=vqlupG50r8Yf) shows which nodes are **‘bridges’** between nodes in a network. |
+| `k-core` | A [k-core](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=vqlupG50r8Yf) in a network is a subset of its nodes in which all nodes have at least **k** connections to each other. |
+| `k-shell` | The [k-shell](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=PgYUzep5KqrU&line=5&uniqifier=1) of a graph G is the set of all nodes belonging to the k–core of G but not to the **(k+1)**–core. |
