@@ -1,3 +1,3 @@
-from .MapFoliumComponent import MapFoliumComponent
-from .SelectComponent import SelectComponent
 from .MapMultiLayerComponent import MapMultiLayerComponent
+from .SelectComponent import SelectComponent
+from .TableComponent import TableComponent

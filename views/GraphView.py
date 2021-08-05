@@ -1,6 +1,7 @@
+import pandas as pd
 import networkx as nx
 from .View import View
-import pandas as pd
+from .components import TableComponent
 
 
 class GraphView(View):
@@ -29,8 +30,6 @@ class GraphView(View):
         cols = self.render_component.beta_columns(2)
         cols[0].markdown(text)
         cols[0].dataframe(dataframe)
-        cols[1].markdown("""
-        | Metric | Description |
-        | --- | --- |
-        | `Diameter` |[Diameter](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=5yquhZpJ1DaF&line=2&uniqifier=1) it is the **shortest** distance between the two most distant nodes in the network|
-        """)
+        TableComponent(render_component=cols[1], headers=TableComponent.metric_headers, values=[
+            ['`Diameter`', '[Diameter](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=5yquhZpJ1DaF&line=2&uniqifier=1) it is the **shortest** distance between the two most distant nodes in the network.', ],
+        ]).render()
