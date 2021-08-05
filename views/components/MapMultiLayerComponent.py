@@ -32,16 +32,16 @@ class MapMultiLayerComponent(MapFoliumComponent):
 
     def draw_nodes(self, graphs):
         label_group = 'nodes'
-        feature_group = folium.FeatureGroup(name=label_group)
+        feature_group = folium.FeatureGroup(name='all ' + label_group)
         self.map.add_child(feature_group)
 
         count_color = 0
         for label, graph in graphs.items():
-            subgroup = plugins.FeatureGroupSubGroup(feature_group, label_group + '-' + label)
+            subgroup = plugins.FeatureGroupSubGroup(feature_group, label_group + ' - ' + label)
             self.map.add_child(subgroup)
 
             for code in graph.nodes():
-                self.draw_circule(code, graph.nodes()[code], self.palettes['nodes'][count_color], subgroup)
+                self.draw_circule(graph, code, graph.nodes()[code], self.palettes['nodes'][count_color], subgroup)
             count_color += 1
 
     def draw_peripheries(self, graphs):
@@ -51,7 +51,7 @@ class MapMultiLayerComponent(MapFoliumComponent):
             return
 
         label_group = 'periphery'
-        feature_group = folium.FeatureGroup(name=label_group)
+        feature_group = folium.FeatureGroup(name='all ' + label_group)
         self.map.add_child(feature_group)
 
         count_color = 0
@@ -60,7 +60,7 @@ class MapMultiLayerComponent(MapFoliumComponent):
             self.map.add_child(subgroup)
 
             for code in nx.periphery(graph):
-                self.draw_circule(code, graph.nodes()[code], self.palettes['periphery'][count_color], subgroup)
+                self.draw_circule(graph, code, graph.nodes()[code], self.palettes['periphery'][count_color], subgroup)
             count_color += 1
 
     def draw_whom_diameter(self, graphs):
@@ -70,7 +70,7 @@ class MapMultiLayerComponent(MapFoliumComponent):
             return
 
         label_group = 'whom_diameter'
-        feature_group = folium.FeatureGroup(name=label_group)
+        feature_group = folium.FeatureGroup(name='all ' + label_group)
         self.map.add_child(feature_group)
 
         count_color = 0
@@ -82,12 +82,14 @@ class MapMultiLayerComponent(MapFoliumComponent):
             whom_diameter = [code for code, value in nx.eccentricity(graph).items() if value == diameter]
 
             for code in whom_diameter:
-                self.draw_circule(code, graph.nodes()[code], self.palettes['diameter'][count_color], subgroup)
+                self.draw_circule(graph, code, graph.nodes()[code], self.palettes['diameter'][count_color], subgroup)
             count_color += 1
 
-    def draw_circule(self, code, node, color, subgroup):
-        folium.Circle((node['latitude'], node['longitude']),
+    def draw_circule(self, graph, code, node, color, subgroup):
+        folium.Circle(location=(node['latitude'], node['longitude']),
                       popup='<b>{}</b> - <i>{} ({})</i>'.format(code, node['name'], node['country']),
                       tooltip=code,
-                      radius=10,
-                      color=color).add_to(subgroup)
+                      radius=len([n for n in nx.neighbors(graph, code)])*1000,
+                      color=color,
+                      fill=True,
+                      fill_opacity=0.6).add_to(subgroup)

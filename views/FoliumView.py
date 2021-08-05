@@ -5,7 +5,7 @@ from views.components import MapMultiLayerComponent, TableComponent
 class FoliumView(View):
     def render(self, graphs):
         self.render_component.markdown("""
-        ## Nodes visualization 
+        ## Graphs visualization 
         """)
 
         cols = self.render_component.beta_columns(2)
