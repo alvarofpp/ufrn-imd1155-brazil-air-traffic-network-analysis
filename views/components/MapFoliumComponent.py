@@ -31,4 +31,5 @@ class MapFoliumComponent(Component):
             self.map.add_child(minimap)
 
         # Call to render Folium map in Streamlit
-        folium_static(self.map)
+        with self.render_component:
+            folium_static(self.map)
