@@ -1,7 +1,7 @@
 from typing import List, Dict
 import networkx as nx
 import streamlit as st
-from views import IntroView, GraphView, FoliumView
+from views import IntroView, GraphView, AirportsView
 from views.components import SelectComponent
 from utils.constants import *
 
@@ -25,7 +25,8 @@ def get_stub_graphml() -> str:
 def get_views() -> List:
     return [
         GraphView(),
-        FoliumView(),
+        AirportsView(),
+        # FoliumView(),
         # TODO Degree Centrality
         # TODO Betweenness Centrality
     ]
@@ -54,9 +55,8 @@ def mode_app(data):
     st.sidebar.markdown('Select the year:')
     for year in data.keys():
         graphs[year] = st.sidebar.checkbox(year)
-    num_columns = sum(graphs.values())
 
-    if num_columns > 0:
+    if sum(graphs.values()) > 0:
         graphs_data = {year: data[year] for year, value in graphs.items() if value}
 
         for page in get_views():
