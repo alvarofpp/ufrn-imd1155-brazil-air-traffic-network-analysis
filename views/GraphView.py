@@ -3,6 +3,7 @@ import networkx as nx
 from typing import Dict
 from .View import View
 from views.components import TableComponent
+from utils.constants import METRICS
 
 
 class GraphView(View):
@@ -26,11 +27,11 @@ class GraphView(View):
             text = text.format('s', 's')
         text = text.format('', '')
 
-        cols = self.render_component.beta_columns(2)
+        cols = self.render_component.beta_columns(self._columns_width)
         cols[0].markdown(text)
         cols[0].dataframe(dataframe)
         TableComponent(render_component=cols[1], headers=TableComponent.metric_headers, values=[
-            ['`Diameter`', '[Diameter](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=5yquhZpJ1DaF&line=2&uniqifier=1) it is the **shortest** distance between the two most distant nodes in the network.', ],
+            METRICS['diameter'],
         ]).render()
 
     def collect_data_from_graph(self, graph) -> Dict:
