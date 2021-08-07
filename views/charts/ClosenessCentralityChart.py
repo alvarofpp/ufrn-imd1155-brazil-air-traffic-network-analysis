@@ -12,7 +12,6 @@ class ClosenessCentralityChart(CentralityChart):
             'tooltips': [
                 ('closeness centrality', '@' + self._attribute)
             ],
-            'palette': 'Viridis256',
         })
         super().__init__(**kwargs)
 

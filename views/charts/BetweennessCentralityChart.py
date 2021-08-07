@@ -12,7 +12,6 @@ class BetweennessCentralityChart(CentralityChart):
             'tooltips': [
                 ('betweenness centrality', '@' + self._attribute)
             ],
-            'palette': 'Viridis256',
         })
         super().__init__(**kwargs)
 

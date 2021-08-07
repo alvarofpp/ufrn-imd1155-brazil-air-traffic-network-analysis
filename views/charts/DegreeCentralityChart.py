@@ -12,7 +12,6 @@ class DegreeCentralityChart(CentralityChart):
             'tooltips': [
                 ('degree centrality', '@' + self._attribute)
             ],
-            'palette': 'Viridis256',
         })
         super().__init__(**kwargs)
 
