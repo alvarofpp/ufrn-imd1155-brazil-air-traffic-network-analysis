@@ -11,7 +11,7 @@ class CoreDecomposition(View):
         self.render_component.markdown("""
         ## Core Decomposition
         """)
-        cols = self.render_component.beta_columns(self._columns_width)
+        cols = self.render_component.columns(self._columns_width)
 
         # Column 1
         graph_selected = cols[1].selectbox('Select the graph', options=list(graphs.keys()), key='core_decomposition')

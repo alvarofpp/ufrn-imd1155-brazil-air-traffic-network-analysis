@@ -10,7 +10,7 @@ class NodeRanking(View):
         self.render_component.markdown("""
         ## Node Ranking 
         """)
-        cols = self.render_component.beta_columns(self._columns_width)
+        cols = self.render_component.columns(self._columns_width)
 
         # Column 1
         graph_selected = cols[1].selectbox('Select the graph', options=list(graphs.keys()), key='node_ranking')

@@ -27,7 +27,7 @@ class GraphView(View):
             text = text.format('s', 's')
         text = text.format('', '')
 
-        cols = self.render_component.beta_columns(self._columns_width)
+        cols = self.render_component.columns(self._columns_width)
         cols[0].markdown(text)
         cols[0].dataframe(dataframe)
         TableComponent(render_component=cols[1], headers=TableComponent.metric_headers, values=[

@@ -7,7 +7,7 @@ class AirportsView(View):
         self.render_component.markdown("""
         ## Airports visualization 
         """)
-        cols = self.render_component.beta_columns([6, 3, 3])
+        cols = self.render_component.columns([6, 3, 3])
 
         # Column 1
         graph_selected = cols[1].selectbox('Select the graph', options=list(graphs.keys()), key='airports')
