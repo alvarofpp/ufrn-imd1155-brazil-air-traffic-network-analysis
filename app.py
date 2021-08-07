@@ -26,9 +26,8 @@ def get_views() -> List:
     return [
         GraphView(),
         NodeRanking(),
-        # TODO Degree Centrality
-        # TODO Betweenness Centrality
         AirportsView(),
+        # TODO Betweenness Centrality
     ]
 
 

@@ -28,8 +28,8 @@ class AirportsMapComponent(MapFoliumComponent):
             node_first = graph.nodes[edge[0]]
             node_second = graph.nodes[edge[1]]
             loc = [
-                (node_first['latitude'], node_first['longitude']),
-                (node_second['latitude'], node_second['longitude']),
+                (float(node_first['latitude']), float(node_first['longitude'])),
+                (float(node_second['latitude']), float(node_second['longitude'])),
             ]
 
             folium.PolyLine(loc,

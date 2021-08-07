@@ -29,8 +29,8 @@ for year in tqdm(years):
         G.add_node(row['code'],
                    name=row['name'],
                    country=row['country'],
-                   latitude=row['lat_geo_point'],
-                   longitude=row['lon_geo_point']
+                   latitude=float(row['lat_geo_point']),
+                   longitude=float(row['lon_geo_point']),
                    )
 
     # Add edges
