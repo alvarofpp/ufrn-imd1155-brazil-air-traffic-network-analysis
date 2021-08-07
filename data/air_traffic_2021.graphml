@@ -1656,9 +1656,6 @@
     <edge source="KMIA" target="KGYR">
       <data key="d4">1</data>
     </edge>
-    <edge source="KMIA" target="KMIA">
-      <data key="d4">2</data>
-    </edge>
     <edge source="KMIA" target="KORD">
       <data key="d4">1</data>
     </edge>
@@ -1832,9 +1829,6 @@
     </edge>
     <edge source="SBCF" target="LIMC">
       <data key="d4">2</data>
-    </edge>
-    <edge source="SBCF" target="SBCF">
-      <data key="d4">17</data>
     </edge>
     <edge source="SBCF" target="SBCJ">
       <data key="d4">11</data>
@@ -2141,9 +2135,6 @@
     </edge>
     <edge source="SBGL" target="SBCB">
       <data key="d4">1</data>
-    </edge>
-    <edge source="SBGL" target="SBGL">
-      <data key="d4">4</data>
     </edge>
     <edge source="SBGL" target="SBGO">
       <data key="d4">8</data>
@@ -2472,9 +2463,6 @@
     <edge source="SBGR" target="LLBG">
       <data key="d4">1</data>
     </edge>
-    <edge source="SBGR" target="SBGR">
-      <data key="d4">21</data>
-    </edge>
     <edge source="SBGR" target="SBIL">
       <data key="d4">12</data>
     </edge>
@@ -2688,9 +2676,6 @@
     <edge source="SGAS" target="SEQM">
       <data key="d4">1</data>
     </edge>
-    <edge source="SGAS" target="SGAS">
-      <data key="d4">1</data>
-    </edge>
     <edge source="SGAS" target="SKBO">
       <data key="d4">1</data>
     </edge>
@@ -2841,9 +2826,6 @@
     <edge source="SBSV" target="SBMK">
       <data key="d4">1</data>
     </edge>
-    <edge source="SBSV" target="SBSV">
-      <data key="d4">11</data>
-    </edge>
     <edge source="SBSV" target="SBTE">
       <data key="d4">4</data>
     </edge>
@@ -2870,9 +2852,6 @@
     </edge>
     <edge source="SBSV" target="SKRG">
       <data key="d4">1</data>
-    </edge>
-    <edge source="SBAR" target="SBAR">
-      <data key="d4">3</data>
     </edge>
     <edge source="SBAR" target="SBBR">
       <data key="d4">8</data>
@@ -2933,9 +2912,6 @@
     </edge>
     <edge source="SBMO" target="SBJU">
       <data key="d4">1</data>
-    </edge>
-    <edge source="SBMO" target="SBMO">
-      <data key="d4">2</data>
     </edge>
     <edge source="SBMO" target="SBPA">
       <data key="d4">2</data>
@@ -2998,9 +2974,6 @@
       <data key="d4">6</data>
     </edge>
     <edge source="SNBR" target="SBGO">
-      <data key="d4">1</data>
-    </edge>
-    <edge source="SNBR" target="SNBR">
       <data key="d4">1</data>
     </edge>
     <edge source="LFPG" target="EDDF">
@@ -3170,9 +3143,6 @@
     </edge>
     <edge source="SBKP" target="SBJD">
       <data key="d4">1</data>
-    </edge>
-    <edge source="SBKP" target="SBKP">
-      <data key="d4">12</data>
     </edge>
     <edge source="SBKP" target="SBLO">
       <data key="d4">11</data>
@@ -3408,9 +3378,6 @@
     <edge source="SCEL" target="SBFZ">
       <data key="d4">1</data>
     </edge>
-    <edge source="SCEL" target="SCEL">
-      <data key="d4">2</data>
-    </edge>
     <edge source="SCEL" target="SDSC">
       <data key="d4">5</data>
     </edge>
@@ -3446,9 +3413,6 @@
     </edge>
     <edge source="SBBV" target="SBBR">
       <data key="d4">15</data>
-    </edge>
-    <edge source="SBBV" target="SBBV">
-      <data key="d4">4</data>
     </edge>
     <edge source="SBBV" target="SBCG">
       <data key="d4">1</data>
@@ -3570,9 +3534,6 @@
     <edge source="SBFL" target="SBBH">
       <data key="d4">2</data>
     </edge>
-    <edge source="SBFL" target="SBFL">
-      <data key="d4">2</data>
-    </edge>
     <edge source="SBFL" target="SBLO">
       <data key="d4">1</data>
     </edge>
@@ -3680,9 +3641,6 @@
     </edge>
     <edge source="SBPA" target="SBGO">
       <data key="d4">1</data>
-    </edge>
-    <edge source="SBPA" target="SBPA">
-      <data key="d4">9</data>
     </edge>
     <edge source="SBPA" target="SBPK">
       <data key="d4">7</data>
@@ -3822,9 +3780,6 @@
     <edge source="LIRF" target="SBRF">
       <data key="d4">1</data>
     </edge>
-    <edge source="SBAU" target="SBAU">
-      <data key="d4">1</data>
-    </edge>
     <edge source="SBAU" target="SBMG">
       <data key="d4">1</data>
     </edge>
@@ -3833,9 +3788,6 @@
     </edge>
     <edge source="SBBE" target="GVAC">
       <data key="d4">1</data>
-    </edge>
-    <edge source="SBBE" target="SBBE">
-      <data key="d4">17</data>
     </edge>
     <edge source="SBBE" target="SBBR">
       <data key="d4">14</data>
@@ -3957,9 +3909,6 @@
     <edge source="SBBR" target="MNMG">
       <data key="d4">1</data>
     </edge>
-    <edge source="SBBR" target="SBBR">
-      <data key="d4">13</data>
-    </edge>
     <edge source="SBBR" target="SBCG">
       <data key="d4">10</data>
     </edge>
@@ -4074,9 +4023,6 @@
     <edge source="SBBR" target="SLLP">
       <data key="d4">1</data>
     </edge>
-    <edge source="SBCG" target="SBCG">
-      <data key="d4">4</data>
-    </edge>
     <edge source="SBCG" target="SBCR">
       <data key="d4">3</data>
     </edge>
@@ -4108,9 +4054,6 @@
       <data key="d4">1</data>
     </edge>
     <edge source="SBCG" target="SBSI">
-      <data key="d4">1</data>
-    </edge>
-    <edge source="SBCH" target="SBCH">
       <data key="d4">1</data>
     </edge>
     <edge source="SBCH" target="SBCT">
@@ -4148,9 +4091,6 @@
     </edge>
     <edge source="SBCT" target="SBCA">
       <data key="d4">5</data>
-    </edge>
-    <edge source="SBCT" target="SBCT">
-      <data key="d4">7</data>
     </edge>
     <edge source="SBCT" target="SBCY">
       <data key="d4">6</data>
@@ -4208,9 +4148,6 @@
     </edge>
     <edge source="SBCY" target="SBBW">
       <data key="d4">6</data>
-    </edge>
-    <edge source="SBCY" target="SBCY">
-      <data key="d4">11</data>
     </edge>
     <edge source="SBCY" target="SBDN">
       <data key="d4">2</data>
@@ -4302,9 +4239,6 @@
     <edge source="SBDN" target="SBAE">
       <data key="d4">2</data>
     </edge>
-    <edge source="SBDN" target="SBDN">
-      <data key="d4">1</data>
-    </edge>
     <edge source="SBDN" target="SBLO">
       <data key="d4">1</data>
     </edge>
@@ -4334,9 +4268,6 @@
     </edge>
     <edge source="SBEG" target="EBLG">
       <data key="d4">1</data>
-    </edge>
-    <edge source="SBEG" target="SBEG">
-      <data key="d4">20</data>
     </edge>
     <edge source="SBEG" target="SBFZ">
       <data key="d4">14</data>
@@ -4443,9 +4374,6 @@
     <edge source="SBFZ" target="LPPT">
       <data key="d4">9</data>
     </edge>
-    <edge source="SBFZ" target="SBFZ">
-      <data key="d4">4</data>
-    </edge>
     <edge source="SBFZ" target="SBGO">
       <data key="d4">1</data>
     </edge>
@@ -4500,9 +4428,6 @@
     <edge source="SBGO" target="SBBW">
       <data key="d4">5</data>
     </edge>
-    <edge source="SBGO" target="SBGO">
-      <data key="d4">4</data>
-    </edge>
     <edge source="SBGO" target="SBJD">
       <data key="d4">6</data>
     </edge>
@@ -4542,9 +4467,6 @@
     <edge source="SBGO" target="SBRB">
       <data key="d4">1</data>
     </edge>
-    <edge source="SBIL" target="SBIL">
-      <data key="d4">1</data>
-    </edge>
     <edge source="SBIL" target="SBJD">
       <data key="d4">2</data>
     </edge>
@@ -4560,9 +4482,6 @@
     <edge source="SBIL" target="SBVT">
       <data key="d4">1</data>
     </edge>
-    <edge source="SBIZ" target="SBIZ">
-      <data key="d4">2</data>
-    </edge>
     <edge source="SBIZ" target="SBRF">
       <data key="d4">6</data>
     </edge>
@@ -4571,9 +4490,6 @@
     </edge>
     <edge source="SBIZ" target="SBTE">
       <data key="d4">1</data>
-    </edge>
-    <edge source="SBJP" target="SBJP">
-      <data key="d4">4</data>
     </edge>
     <edge source="SBJP" target="SBRF">
       <data key="d4">7</data>
@@ -4588,9 +4504,6 @@
       <data key="d4">1</data>
     </edge>
     <edge source="SBJP" target="SBVT">
-      <data key="d4">1</data>
-    </edge>
-    <edge source="SBJV" target="SBJV">
       <data key="d4">1</data>
     </edge>
     <edge source="SBJV" target="SBMG">
@@ -4608,9 +4521,6 @@
     <edge source="SBLO" target="SBFI">
       <data key="d4">2</data>
     </edge>
-    <edge source="SBLO" target="SBLO">
-      <data key="d4">1</data>
-    </edge>
     <edge source="SBLO" target="SBMG">
       <data key="d4">2</data>
     </edge>
@@ -4623,12 +4533,6 @@
     <edge source="SBLO" target="SBSL">
       <data key="d4">1</data>
     </edge>
-    <edge source="SBMA" target="SBMA">
-      <data key="d4">2</data>
-    </edge>
-    <edge source="SBMQ" target="SBMQ">
-      <data key="d4">3</data>
-    </edge>
     <edge source="SBMQ" target="SBRF">
       <data key="d4">1</data>
     </edge>
@@ -4636,9 +4540,6 @@
       <data key="d4">2</data>
     </edge>
     <edge source="SBMQ" target="SWPI">
-      <data key="d4">1</data>
-    </edge>
-    <edge source="SBNF" target="SBNF">
       <data key="d4">1</data>
     </edge>
     <edge source="SBNF" target="SBRJ">
@@ -4653,9 +4554,6 @@
     <edge source="SBPJ" target="SBJD">
       <data key="d4">2</data>
     </edge>
-    <edge source="SBPJ" target="SBPJ">
-      <data key="d4">1</data>
-    </edge>
     <edge source="SBPJ" target="SBRF">
       <data key="d4">3</data>
     </edge>
@@ -4669,9 +4567,6 @@
       <data key="d4">4</data>
     </edge>
     <edge source="SBPS" target="SBMK">
-      <data key="d4">1</data>
-    </edge>
-    <edge source="SBPS" target="SBPS">
       <data key="d4">1</data>
     </edge>
     <edge source="SBPS" target="SBRJ">
@@ -4694,9 +4589,6 @@
     </edge>
     <edge source="SBPS" target="SBRF">
       <data key="d4">1</data>
-    </edge>
-    <edge source="SBPV" target="SBPV">
-      <data key="d4">2</data>
     </edge>
     <edge source="SBPV" target="SBRB">
       <data key="d4">3</data>
@@ -4766,9 +4658,6 @@
     </edge>
     <edge source="SBRF" target="OMAA">
       <data key="d4">1</data>
-    </edge>
-    <edge source="SBRF" target="SBRF">
-      <data key="d4">13</data>
     </edge>
     <edge source="SBRF" target="SBRJ">
       <data key="d4">9</data>
@@ -4842,9 +4731,6 @@
     <edge source="SBRJ" target="SBMK">
       <data key="d4">1</data>
     </edge>
-    <edge source="SBRJ" target="SBRJ">
-      <data key="d4">9</data>
-    </edge>
     <edge source="SBRJ" target="SBRP">
       <data key="d4">7</data>
     </edge>
@@ -4884,9 +4770,6 @@
     <edge source="SBRP" target="SBAE">
       <data key="d4">1</data>
     </edge>
-    <edge source="SBRP" target="SBRP">
-      <data key="d4">7</data>
-    </edge>
     <edge source="SBRP" target="SBSG">
       <data key="d4">1</data>
     </edge>
@@ -4908,9 +4791,6 @@
     <edge source="SBSJ" target="SBJD">
       <data key="d4">2</data>
     </edge>
-    <edge source="SBSJ" target="SBSJ">
-      <data key="d4">1</data>
-    </edge>
     <edge source="SBSJ" target="SBSP">
       <data key="d4">2</data>
     </edge>
@@ -4920,9 +4800,6 @@
     <edge source="SBSL" target="SBHT">
       <data key="d4">1</data>
     </edge>
-    <edge source="SBSL" target="SBSL">
-      <data key="d4">1</data>
-    </edge>
     <edge source="SBSL" target="SBTE">
       <data key="d4">1</data>
     </edge>
@@ -4930,9 +4807,6 @@
       <data key="d4">1</data>
     </edge>
     <edge source="SBSM" target="SBPK">
-      <data key="d4">1</data>
-    </edge>
-    <edge source="SBSM" target="SBSM">
       <data key="d4">1</data>
     </edge>
     <edge source="SBSP" target="SBCB">
@@ -4955,9 +4829,6 @@
     </edge>
     <edge source="SBSP" target="SBSG">
       <data key="d4">4</data>
-    </edge>
-    <edge source="SBSP" target="SBSP">
-      <data key="d4">10</data>
     </edge>
     <edge source="SBSP" target="SBSR">
       <data key="d4">4</data>
@@ -4998,9 +4869,6 @@
     <edge source="SBSR" target="SBFI">
       <data key="d4">1</data>
     </edge>
-    <edge source="SBSR" target="SBSR">
-      <data key="d4">2</data>
-    </edge>
     <edge source="SBSR" target="SBUL">
       <data key="d4">1</data>
     </edge>
@@ -5013,9 +4881,6 @@
     <edge source="SBTE" target="SBJU">
       <data key="d4">1</data>
     </edge>
-    <edge source="SBTE" target="SBTE">
-      <data key="d4">1</data>
-    </edge>
     <edge source="SBUG" target="SBNM">
       <data key="d4">3</data>
     </edge>
@@ -5025,9 +4890,6 @@
     <edge source="SBUL" target="SBAE">
       <data key="d4">1</data>
     </edge>
-    <edge source="SBUL" target="SBUL">
-      <data key="d4">5</data>
-    </edge>
     <edge source="SBUL" target="SBUR">
       <data key="d4">1</data>
     </edge>
@@ -5036,9 +4898,6 @@
     </edge>
     <edge source="SBVT" target="SBJD">
       <data key="d4">4</data>
-    </edge>
-    <edge source="SBVT" target="SBVT">
-      <data key="d4">9</data>
     </edge>
     <edge source="SBVT" target="SNCX">
       <data key="d4">1</data>
@@ -5055,13 +4914,7 @@
     <edge source="SWFX" target="SWHP">
       <data key="d4">6</data>
     </edge>
-    <edge source="SBCX" target="SBCX">
-      <data key="d4">1</data>
-    </edge>
     <edge source="SBFI" target="SBCA">
-      <data key="d4">1</data>
-    </edge>
-    <edge source="SBFI" target="SBFI">
       <data key="d4">1</data>
     </edge>
     <edge source="SBFI" target="SBPG">
@@ -5081,9 +4934,6 @@
     </edge>
     <edge source="SBSN" target="SBMD">
       <data key="d4">3</data>
-    </edge>
-    <edge source="SBSN" target="SBSN">
-      <data key="d4">4</data>
     </edge>
     <edge source="SBSN" target="SBTB">
       <data key="d4">2</data>
@@ -5157,9 +5007,6 @@
     <edge source="MPTO" target="KIAH">
       <data key="d4">1</data>
     </edge>
-    <edge source="EDDF" target="EDDF">
-      <data key="d4">1</data>
-    </edge>
     <edge source="EDDF" target="GVAC">
       <data key="d4">6</data>
     </edge>
@@ -5175,9 +5022,6 @@
     <edge source="EDDF" target="SPJC">
       <data key="d4">2</data>
     </edge>
-    <edge source="SEGU" target="SEGU">
-      <data key="d4">1</data>
-    </edge>
     <edge source="SEGU" target="SLVR">
       <data key="d4">1</data>
     </edge>
@@ -5189,9 +5033,6 @@
     </edge>
     <edge source="SBBU" target="SBJD">
       <data key="d4">1</data>
-    </edge>
-    <edge source="SBMG" target="SBMG">
-      <data key="d4">3</data>
     </edge>
     <edge source="KLAX" target="RKSI">
       <data key="d4">6</data>
@@ -5247,9 +5088,6 @@
     <edge source="SNTI" target="SNRJ">
       <data key="d4">3</data>
     </edge>
-    <edge source="SBHT" target="SBHT">
-      <data key="d4">1</data>
-    </edge>
     <edge source="SBIH" target="SWPI">
       <data key="d4">6</data>
     </edge>
@@ -5271,20 +5109,11 @@
     <edge source="SBMD" target="SNYA">
       <data key="d4">6</data>
     </edge>
-    <edge source="SBFN" target="SBFN">
-      <data key="d4">1</data>
-    </edge>
     <edge source="SBFN" target="SBSG">
       <data key="d4">1</data>
     </edge>
-    <edge source="SBMK" target="SBMK">
-      <data key="d4">2</data>
-    </edge>
     <edge source="SBMK" target="SBSG">
       <data key="d4">3</data>
-    </edge>
-    <edge source="SBPB" target="SBPB">
-      <data key="d4">1</data>
     </edge>
     <edge source="SBTB" target="SNRJ">
       <data key="d4">3</data>
@@ -5294,12 +5123,6 @@
     </edge>
     <edge source="SBTB" target="SNMA">
       <data key="d4">3</data>
-    </edge>
-    <edge source="SBJU" target="SBJU">
-      <data key="d4">1</data>
-    </edge>
-    <edge source="SBAT" target="SBAT">
-      <data key="d4">1</data>
     </edge>
     <edge source="SNMZ" target="SNVS">
       <data key="d4">3</data>
@@ -5316,9 +5139,6 @@
     <edge source="SWJN" target="SBJD">
       <data key="d4">1</data>
     </edge>
-    <edge source="SWJN" target="SWJN">
-      <data key="d4">5</data>
-    </edge>
     <edge source="SWJN" target="SWTS">
       <data key="d4">1</data>
     </edge>
@@ -5327,9 +5147,6 @@
     </edge>
     <edge source="SWTS" target="SSOU">
       <data key="d4">4</data>
-    </edge>
-    <edge source="SBCP" target="SBCP">
-      <data key="d4">1</data>
     </edge>
     <edge source="SBCZ" target="SBRB">
       <data key="d4">11</data>
@@ -5351,9 +5168,6 @@
     </edge>
     <edge source="SBTF" target="SWCA">
       <data key="d4">2</data>
-    </edge>
-    <edge source="SBTT" target="SBTT">
-      <data key="d4">3</data>
     </edge>
     <edge source="SWCA" target="SBUY">
       <data key="d4">6</data>
@@ -5382,20 +5196,11 @@
     <edge source="GVAC" target="SPJC">
       <data key="d4">1</data>
     </edge>
-    <edge source="SBCB" target="SBCB">
-      <data key="d4">1</data>
-    </edge>
     <edge source="SBCB" target="SEQM">
-      <data key="d4">1</data>
-    </edge>
-    <edge source="SMJP" target="SMJP">
       <data key="d4">1</data>
     </edge>
     <edge source="LSZH" target="SPJC">
       <data key="d4">2</data>
-    </edge>
-    <edge source="LPPT" target="LPPT">
-      <data key="d4">1</data>
     </edge>
     <edge source="LPFR" target="LTBA">
       <data key="d4">1</data>
@@ -5439,9 +5244,6 @@
     <edge source="KFLL" target="CYLW">
       <data key="d4">1</data>
     </edge>
-    <edge source="KFLL" target="KFLL">
-      <data key="d4">1</data>
-    </edge>
     <edge source="KFLL" target="SYCJ">
       <data key="d4">1</data>
     </edge>
@@ -5466,9 +5268,6 @@
     <edge source="SEQM" target="SCCF">
       <data key="d4">1</data>
     </edge>
-    <edge source="SEQM" target="SEQM">
-      <data key="d4">1</data>
-    </edge>
     <edge source="SEQM" target="SKRG">
       <data key="d4">2</data>
     </edge>
@@ -5484,22 +5283,7 @@
     <edge source="SBAC" target="SBSG">
       <data key="d4">1</data>
     </edge>
-    <edge source="SBAE" target="SBAE">
-      <data key="d4">1</data>
-    </edge>
-    <edge source="SBSG" target="SBSG">
-      <data key="d4">1</data>
-    </edge>
-    <edge source="SBSI" target="SBSI">
-      <data key="d4">2</data>
-    </edge>
     <edge source="SBSI" target="SSOU">
-      <data key="d4">1</data>
-    </edge>
-    <edge source="SBVC" target="SBVC">
-      <data key="d4">1</data>
-    </edge>
-    <edge source="SBZM" target="SBZM">
       <data key="d4">1</data>
     </edge>
     <edge source="TJSJ" target="KAEX">
@@ -5526,9 +5310,6 @@
     <edge source="SPJC" target="SKRG">
       <data key="d4">1</data>
     </edge>
-    <edge source="ELLX" target="ELLX">
-      <data key="d4">6</data>
-    </edge>
     <edge source="KAEX" target="SYCJ">
       <data key="d4">2</data>
     </edge>
@@ -5547,9 +5328,6 @@
     <edge source="HAAB" target="FOOL">
       <data key="d4">1</data>
     </edge>
-    <edge source="MROC" target="MROC">
-      <data key="d4">1</data>
-    </edge>
     <edge source="LATI" target="UAAA">
       <data key="d4">1</data>
     </edge>
@@ -5559,14 +5337,8 @@
     <edge source="SCCF" target="SCDA">
       <data key="d4">1</data>
     </edge>
-    <edge source="SDSC" target="SDSC">
-      <data key="d4">1</data>
-    </edge>
     <edge source="SBBW" target="SBJD">
       <data key="d4">3</data>
-    </edge>
-    <edge source="SBJD" target="SBJD">
-      <data key="d4">5</data>
     </edge>
     <edge source="SJHG" target="SWHP">
       <data key="d4">1</data>
@@ -5579,9 +5351,6 @@
     </edge>
     <edge source="SNRJ" target="SDWQ">
       <data key="d4">2</data>
-    </edge>
-    <edge source="SWHP" target="SWHP">
-      <data key="d4">1</data>
     </edge>
     <edge source="HKJK" target="UCFM">
       <data key="d4">1</data>
