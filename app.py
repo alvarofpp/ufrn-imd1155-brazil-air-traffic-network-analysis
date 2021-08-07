@@ -1,7 +1,7 @@
 from typing import List, Dict
 import networkx as nx
 import streamlit as st
-from views import IntroView, GraphView, AirportsView
+from views import IntroView, GraphView, AirportsView, NodeRanking
 from views.components import SelectComponent
 from utils.constants import *
 
@@ -25,10 +25,10 @@ def get_stub_graphml() -> str:
 def get_views() -> List:
     return [
         GraphView(),
-        AirportsView(),
-        # FoliumView(),
+        NodeRanking(),
         # TODO Degree Centrality
         # TODO Betweenness Centrality
+        AirportsView(),
     ]
 
 

@@ -10,7 +10,7 @@ class AirportsView(View):
         cols = self.render_component.beta_columns([6, 3, 3])
 
         # Column 1
-        graph_selected = cols[1].selectbox('Select the graph', options=list(graphs.keys()))
+        graph_selected = cols[1].selectbox('Select the graph', options=list(graphs.keys()), key='airports')
         graph = graphs[graph_selected]
 
         degrees = sorted(graph.degree, key=lambda x: x[1], reverse=True)
@@ -24,7 +24,6 @@ class AirportsView(View):
                        ]).render()
 
         edges = sorted(graph.edges(data=True), key=lambda edge: edge[2].get('flight_count', 1), reverse=True)
-        print(edges, type(edges))
         cols[2].text('Top 5 trips that happened the most:')
         TableComponent(render_component=cols[2],
                        headers=['Rank', 'Trip', 'Times'],
