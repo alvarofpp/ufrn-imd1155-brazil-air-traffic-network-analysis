@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key id="d4" for="edge" attr.name="flight_count" attr.type="long" />
-  <key id="d3" for="node" attr.name="longitude" attr.type="double" />
-  <key id="d2" for="node" attr.name="latitude" attr.type="double" />
+  <key id="d3" for="node" attr.name="longitude" attr.type="string" />
+  <key id="d2" for="node" attr.name="latitude" attr.type="string" />
   <key id="d1" for="node" attr.name="country" attr.type="string" />
   <key id="d0" for="node" attr.name="name" attr.type="string" />
   <graph edgedefault="undirected">
@@ -27,20 +27,20 @@
     <node id="SBCF">
       <data key="d0">CONFINS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-19.624444</data>
-      <data key="d3">-43.971944</data>
+      <data key="d2">-19.62444305419922</data>
+      <data key="d3">-43.97194290161133</data>
     </node>
     <node id="SBGL">
       <data key="d0">RIO DE JANEIRO</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-22.81</data>
-      <data key="d3">-43.250556</data>
+      <data key="d2">-22.8099994659</data>
+      <data key="d3">-43.2505569458</data>
     </node>
     <node id="SBGR">
       <data key="d0">GUARULHOS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-23.435556</data>
-      <data key="d3">-46.473056</data>
+      <data key="d2">-23.435556411743164</data>
+      <data key="d3">-46.47305679321289</data>
     </node>
     <node id="SGAS">
       <data key="d0">ASUNCIÓN</data>
@@ -63,38 +63,38 @@
     <node id="SBSV">
       <data key="d0">SALVADOR</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-12.908611</data>
-      <data key="d3">-38.3225</data>
+      <data key="d2">-12.9086112976</data>
+      <data key="d3">-38.3224983215</data>
     </node>
     <node id="SNTF">
       <data key="d0">TEIXEIRA DE FREITAS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-17.524444</data>
-      <data key="d3">-39.668333</data>
+      <data key="d2">-17.524499893188</data>
+      <data key="d3">-39.66849899292</data>
     </node>
     <node id="SBAR">
       <data key="d0">ARACAJU</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-10.985278</data>
-      <data key="d3">-37.073333</data>
+      <data key="d2">-10.984000206</data>
+      <data key="d3">-37.0703010559</data>
     </node>
     <node id="SBMO">
       <data key="d0">RIO LARGO</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-9.5172222</data>
-      <data key="d3">-35.783611</data>
+      <data key="d2">-9.510809898376465</data>
+      <data key="d3">-35.79169845581055</data>
     </node>
     <node id="SBPL">
       <data key="d0">PETROLINA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-9.3675</data>
-      <data key="d3">-40.563611</data>
+      <data key="d2">-9.362409591674805</data>
+      <data key="d3">-40.56909942626953</data>
     </node>
     <node id="SNBR">
       <data key="d0">BARREIRAS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-12.079167</data>
-      <data key="d3">-45.009444</data>
+      <data key="d2">-12.078900337219238</data>
+      <data key="d3">-45.00899887084961</data>
     </node>
     <node id="CYYZ">
       <data key="d0">TORONTO</data>
@@ -111,8 +111,8 @@
     <node id="SBKP">
       <data key="d0">CAMPINAS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-23.006944</data>
-      <data key="d3">-47.134444</data>
+      <data key="d2">-23.0074005127</data>
+      <data key="d3">-47.1344985962</data>
     </node>
     <node id="SCEL">
       <data key="d0">SANTIAGO</data>
@@ -147,8 +147,8 @@
     <node id="SBFL">
       <data key="d0">FLORIANÓPOLIS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-27.670278</data>
-      <data key="d3">-48.5525</data>
+      <data key="d2">-27.670278549194336</data>
+      <data key="d3">-48.5525016784668</data>
     </node>
     <node id="LEMD">
       <data key="d0">MADRID</data>
@@ -165,8 +165,8 @@
     <node id="SBPA">
       <data key="d0">PORTO ALEGRE</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-29.994722</data>
-      <data key="d3">-51.171111</data>
+      <data key="d2">-29.994400024414062</data>
+      <data key="d3">-51.1713981628418</data>
     </node>
     <node id="SKBO">
       <data key="d0">BOGOTÁ</data>
@@ -189,326 +189,326 @@
     <node id="SBAU">
       <data key="d0">ARAÇATUBA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-21.144167</data>
-      <data key="d3">-50.426389</data>
+      <data key="d2">-21.1413002014</data>
+      <data key="d3">-50.4247016907</data>
     </node>
     <node id="SBBE">
       <data key="d0">BELÉM</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-1.3847222</data>
-      <data key="d3">-48.478889</data>
+      <data key="d2">-1.3792500495900002</data>
+      <data key="d3">-48.4762992859</data>
     </node>
     <node id="SBBH">
       <data key="d0">BELO HORIZONTE</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-19.851944</data>
-      <data key="d3">-43.950556</data>
+      <data key="d2">-19.851200103759766</data>
+      <data key="d3">-43.950599670410156</data>
     </node>
     <node id="SBBR">
       <data key="d0">BRASÍLIA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-15.871111</data>
-      <data key="d3">-47.918611</data>
+      <data key="d2">-15.869167</data>
+      <data key="d3">-47.920834</data>
     </node>
     <node id="SBCG">
       <data key="d0">CAMPO GRANDE</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-20.469444</data>
-      <data key="d3">-54.670278</data>
+      <data key="d2">-20.468700408900002</data>
+      <data key="d3">-54.6725006104</data>
     </node>
     <node id="SBCH">
       <data key="d0">CHAPECÓ</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-27.133889</data>
-      <data key="d3">-52.661944</data>
+      <data key="d2">-27.134199142456</data>
+      <data key="d3">-52.656600952148</data>
     </node>
     <node id="SBCJ">
       <data key="d0">PARAUAPEBAS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-6.1152778</data>
-      <data key="d3">-50.001389</data>
+      <data key="d2">-6.11527776718</data>
+      <data key="d3">-50.0013885498</data>
     </node>
     <node id="SBCT">
       <data key="d0">SÃO JOSÉ DOS PINHAIS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-25.531667</data>
-      <data key="d3">-49.176111</data>
+      <data key="d2">-25.5284996033</data>
+      <data key="d3">-49.1758003235</data>
     </node>
     <node id="SBCY">
       <data key="d0">VÁRZEA GRANDE</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-15.65</data>
-      <data key="d3">-56.1175</data>
+      <data key="d2">-15.6528997421</data>
+      <data key="d3">-56.1166992188</data>
     </node>
     <node id="SBDN">
       <data key="d0">PRESIDENTE PRUDENTE</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-22.178333</data>
-      <data key="d3">-51.418889</data>
+      <data key="d2">-22.1751003265</data>
+      <data key="d3">-51.4245986938</data>
     </node>
     <node id="SBEG">
       <data key="d0">MANAUS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-3.0411111</data>
-      <data key="d3">-60.050556</data>
+      <data key="d2">-3.03861</data>
+      <data key="d3">-60.049702</data>
     </node>
     <node id="SBFZ">
       <data key="d0">FORTALEZA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-3.7758333</data>
-      <data key="d3">-38.532222</data>
+      <data key="d2">-3.776279926300049</data>
+      <data key="d3">-38.53260040283203</data>
     </node>
     <node id="SBGO">
       <data key="d0">GOIÂNIA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-16.6325</data>
-      <data key="d3">-49.221111</data>
+      <data key="d2">-16.631999969482422</data>
+      <data key="d3">-49.220699310302734</data>
     </node>
     <node id="SBIL">
       <data key="d0">ILHÉUS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-14.815</data>
-      <data key="d3">-39.033333</data>
+      <data key="d2">-14.815999984741</data>
+      <data key="d3">-39.033199310303</data>
     </node>
     <node id="SBIZ">
       <data key="d0">IMPERATRIZ</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-5.5305556</data>
-      <data key="d3">-47.458333</data>
+      <data key="d2">-5.53129</data>
+      <data key="d3">-47.459999</data>
     </node>
     <node id="SBJP">
       <data key="d0">SANTA RITA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-7.1483333</data>
-      <data key="d3">-34.950278</data>
+      <data key="d2">-7.145833015440001</data>
+      <data key="d3">-34.9486122131</data>
     </node>
     <node id="SBJV">
       <data key="d0">JOINVILLE</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-26.223056</data>
-      <data key="d3">-48.797778</data>
+      <data key="d2">-26.22450065612793</data>
+      <data key="d3">-48.797401428222656</data>
     </node>
     <node id="SBLO">
       <data key="d0">LONDRINA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-23.330278</data>
-      <data key="d3">-51.136667</data>
+      <data key="d2">-23.333599090599996</data>
+      <data key="d3">-51.1301002502</data>
     </node>
     <node id="SBMA">
       <data key="d0">MARABÁ</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-5.3680556</data>
-      <data key="d3">-49.138056</data>
+      <data key="d2">-5.36858987808</data>
+      <data key="d3">-49.138000488299994</data>
     </node>
     <node id="SBMQ">
       <data key="d0">MACAPÁ</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">0.0508333</data>
-      <data key="d3">-51.070278</data>
+      <data key="d2">0.0506640002131</data>
+      <data key="d3">-51.0722007751</data>
     </node>
     <node id="SBNF">
       <data key="d0">NAVEGANTES</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-26.878611</data>
-      <data key="d3">-48.650833</data>
+      <data key="d2">-26.879999</data>
+      <data key="d3">-48.651402</data>
     </node>
     <node id="SBPJ">
       <data key="d0">PALMAS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-10.29</data>
-      <data key="d3">-48.357778</data>
+      <data key="d2">-10.291500091600001</data>
+      <data key="d3">-48.35699844359999</data>
     </node>
     <node id="SBPS">
       <data key="d0">PORTO SEGURO</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-16.438056</data>
-      <data key="d3">-39.077778</data>
+      <data key="d2">-16.438601</data>
+      <data key="d3">-39.080898</data>
     </node>
     <node id="SBPV">
       <data key="d0">PORTO VELHO</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-8.7136111</data>
-      <data key="d3">-63.902778</data>
+      <data key="d2">-8.70928955078125</data>
+      <data key="d3">-63.90230178833008</data>
     </node>
     <node id="SBRF">
       <data key="d0">RECIFE</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-8.1263889</data>
-      <data key="d3">-34.922778</data>
+      <data key="d2">-8.126489639282227</data>
+      <data key="d3">-34.92359924316406</data>
     </node>
     <node id="SBRJ">
       <data key="d0">RIO DE JANEIRO</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-22.91</data>
-      <data key="d3">-43.1625</data>
+      <data key="d2">-22.910499572799996</data>
+      <data key="d3">-43.1631011963</data>
     </node>
     <node id="SBRP">
       <data key="d0">RIBEIRÃO PRETO</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-21.136389</data>
-      <data key="d3">-47.776667</data>
+      <data key="d2">-21.136388778686523</data>
+      <data key="d3">-47.776668548583984</data>
     </node>
     <node id="SBSJ">
       <data key="d0">SÃO JOSÉ DOS CAMPOS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-23.228889</data>
-      <data key="d3">-45.871111</data>
+      <data key="d2">-23.22920036315918</data>
+      <data key="d3">-45.86149978637695</data>
     </node>
     <node id="SBSL">
       <data key="d0">SÃO LUÍS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-2.5869444</data>
-      <data key="d3">-44.236111</data>
+      <data key="d2">-2.585360050201416</data>
+      <data key="d3">-44.234100341796875</data>
     </node>
     <node id="SBSM">
       <data key="d0">SANTA MARIA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-29.710833</data>
-      <data key="d3">-53.692222</data>
+      <data key="d2">-29.711399</data>
+      <data key="d3">-53.688202</data>
     </node>
     <node id="SBSP">
       <data key="d0">SÃO PAULO</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-23.626111</data>
-      <data key="d3">-46.656389</data>
+      <data key="d2">-23.626110076904297</data>
+      <data key="d3">-46.65638732910156</data>
     </node>
     <node id="SBSR">
       <data key="d0">SÃO JOSÉ DO RIO PRETO</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-20.816111</data>
-      <data key="d3">-49.404722</data>
+      <data key="d2">-20.816600799599996</data>
+      <data key="d3">-49.40650177</data>
     </node>
     <node id="SBTC">
       <data key="d0">UNA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-15.353333</data>
-      <data key="d3">-38.997222</data>
+      <data key="d2">-15.355199813799999</data>
+      <data key="d3">-38.9990005493</data>
     </node>
     <node id="SBTE">
       <data key="d0">TERESINA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-5.0605556</data>
-      <data key="d3">-42.824444</data>
+      <data key="d2">-5.0599398613</data>
+      <data key="d3">-42.8235015869</data>
     </node>
     <node id="SBUG">
       <data key="d0">URUGUAIANA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-29.783333</data>
-      <data key="d3">-57.036944</data>
+      <data key="d2">-29.7821998596</data>
+      <data key="d3">-57.0382003784</data>
     </node>
     <node id="SBUL">
       <data key="d0">UBERLÂNDIA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-18.883611</data>
-      <data key="d3">-48.225278</data>
+      <data key="d2">-18.883612</data>
+      <data key="d3">-48.225277</data>
     </node>
     <node id="SBUR">
       <data key="d0">UBERABA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-19.764722</data>
-      <data key="d3">-47.966111</data>
+      <data key="d2">-19.764722824097</data>
+      <data key="d3">-47.966110229492</data>
     </node>
     <node id="SBVG">
       <data key="d0">VARGINHA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-21.588889</data>
-      <data key="d3">-45.473333</data>
+      <data key="d2">-21.5900993347</data>
+      <data key="d3">-45.4733009338</data>
     </node>
     <node id="SBVH">
       <data key="d0">VILHENA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-12.694167</data>
-      <data key="d3">-60.097222</data>
+      <data key="d2">-12.694399833679</data>
+      <data key="d3">-60.098300933838</data>
     </node>
     <node id="SBVT">
       <data key="d0">VITÓRIA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-20.258056</data>
-      <data key="d3">-40.286389</data>
+      <data key="d2">-20.258057</data>
+      <data key="d3">-40.286388</data>
     </node>
     <node id="SDAG">
       <data key="d0">ANGRA DOS REIS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-22.975278</data>
-      <data key="d3">-44.307222</data>
+      <data key="d2">-22.975299835205078</data>
+      <data key="d3">-44.307098388671875</data>
     </node>
     <node id="SWFX">
       <data key="d0">SÃO FÉLIX DO ARAGUAIA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-11.631944</data>
-      <data key="d3">-50.688333</data>
+      <data key="d2">-11.632399559020996</data>
+      <data key="d3">-50.68960189819336</data>
     </node>
     <node id="SBCX">
       <data key="d0">CAXIAS DO SUL</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-29.195556</data>
-      <data key="d3">-51.189722</data>
+      <data key="d2">-29.197099685699996</data>
+      <data key="d3">-51.1875</data>
     </node>
     <node id="SBFI">
       <data key="d0">FOZ DO IGUAÇU</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-25.600278</data>
-      <data key="d3">-54.485</data>
+      <data key="d2">-25.600278854370117</data>
+      <data key="d3">-54.48500061035156</data>
     </node>
     <node id="SBSN">
       <data key="d0">SANTARÉM</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-2.4247222</data>
-      <data key="d3">-54.785833</data>
+      <data key="d2">-2.4247219562530518</data>
+      <data key="d3">-54.785831451416016</data>
     </node>
     <node id="SDCO">
       <data key="d0">SOROCABA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-23.483056</data>
-      <data key="d3">-47.486389</data>
+      <data key="d2">-23.478001</data>
+      <data key="d3">-47.490002</data>
     </node>
     <node id="SDUB">
       <data key="d0">UBATUBA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-23.441389</data>
-      <data key="d3">-45.076111</data>
+      <data key="d2">-23.441099166870117</data>
+      <data key="d3">-45.075599670410156</data>
     </node>
     <node id="SWGN">
       <data key="d0">ARAGUAÍNA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-7.2283333</data>
-      <data key="d3">-48.240833</data>
+      <data key="d2">-7.22787</data>
+      <data key="d3">-48.240501</data>
     </node>
     <node id="SBCA">
       <data key="d0">CASCAVEL</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-25.002222</data>
-      <data key="d3">-53.501944</data>
+      <data key="d2">-25.0002994537</data>
+      <data key="d3">-53.500801086399996</data>
     </node>
     <node id="SBCR">
       <data key="d0">CORUMBÁ</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-19.011944</data>
-      <data key="d3">-57.671389</data>
+      <data key="d2">-19.0119438171</data>
+      <data key="d3">-57.6713905334</data>
     </node>
     <node id="SBME">
       <data key="d0">MACAÉ</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-22.342778</data>
-      <data key="d3">-41.763889</data>
+      <data key="d2">-22.343000412</data>
+      <data key="d3">-41.7659988403</data>
     </node>
     <node id="SBML">
       <data key="d0">MARÍLIA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-22.195556</data>
-      <data key="d3">-49.926944</data>
+      <data key="d2">-22.1968994141</data>
+      <data key="d3">-49.926399231</data>
     </node>
     <node id="SBPK">
       <data key="d0">PELOTAS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-31.716111</data>
-      <data key="d3">-52.331111</data>
+      <data key="d2">-31.718399</data>
+      <data key="d3">-52.327702</data>
     </node>
     <node id="SNRU">
       <data key="d0">CARUARU</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-8.2844444</data>
-      <data key="d3">-36.010833</data>
+      <data key="d2">-8.282389640808105</data>
+      <data key="d3">-36.01350021362305</data>
     </node>
     <node id="MDSD">
       <data key="d0">SAO DOMINGO/DE LAS AMÉRICAS</data>
@@ -561,7 +561,7 @@
     <node id="SEGU">
       <data key="d0">GUAYAQUIL</data>
       <data key="d1">EQUADOR</data>
-      <data key="d2">-2.15741991997</data>
+      <data key="d2">-2.1574199199699997</data>
       <data key="d3">-79.88359832760001</data>
     </node>
     <node id="KMEM">
@@ -585,14 +585,14 @@
     <node id="SBBU">
       <data key="d0">BAURU</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-22.343611</data>
-      <data key="d3">-49.053889</data>
+      <data key="d2">-22.3449993134</data>
+      <data key="d3">-49.0537986755</data>
     </node>
     <node id="SBMG">
       <data key="d0">MARINGÁ</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-23.479444</data>
-      <data key="d3">-52.012222</data>
+      <data key="d2">-23.47606</data>
+      <data key="d3">-52.016187</data>
     </node>
     <node id="KLAX">
       <data key="d0">LOS ANGELES, CALIFORNIA</data>
@@ -615,56 +615,56 @@
     <node id="SNOX">
       <data key="d0">ORIXIMINÁ</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-1.7136111</data>
-      <data key="d3">-55.835833</data>
+      <data key="d2">-1.7140799760818481</data>
+      <data key="d3">-55.83620071411133</data>
     </node>
     <node id="SNTI">
       <data key="d0">ÓBIDOS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-1.8680556</data>
-      <data key="d3">-55.514444</data>
+      <data key="d2">-1.867169976234436</data>
+      <data key="d3">-55.514400482177734</data>
     </node>
     <node id="SBHT">
       <data key="d0">ALTAMIRA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-3.2508333</data>
-      <data key="d3">-52.252222</data>
+      <data key="d2">-3.2539100646973</data>
+      <data key="d3">-52.254001617432</data>
     </node>
     <node id="SBIH">
       <data key="d0">ITAITUBA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-4.2422222</data>
-      <data key="d3">-56.000833</data>
+      <data key="d2">-4.2423400878906</data>
+      <data key="d3">-56.000701904297</data>
     </node>
     <node id="SBMD">
       <data key="d0">ALMEIRIM</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-0.8897222</data>
-      <data key="d3">-52.602222</data>
+      <data key="d2">-0.889839</data>
+      <data key="d3">-52.6022</data>
     </node>
     <node id="SBFN">
       <data key="d0">FERNANDO DE NORONHA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-3.8547222</data>
-      <data key="d3">-32.428333</data>
+      <data key="d2">-3.85493</data>
+      <data key="d3">-32.423302</data>
     </node>
     <node id="SBKG">
       <data key="d0">CAMPINA GRANDE</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-7.2691667</data>
-      <data key="d3">-35.895</data>
+      <data key="d2">-7.26992</data>
+      <data key="d3">-35.8964</data>
     </node>
     <node id="SBMK">
       <data key="d0">MONTES CLAROS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-16.706111</data>
-      <data key="d3">-43.821944</data>
+      <data key="d2">-16.706899642899998</data>
+      <data key="d3">-43.818901062</data>
     </node>
     <node id="SBPB">
       <data key="d0">PARNAÍBA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-2.8938889</data>
-      <data key="d3">-41.730278</data>
+      <data key="d2">-2.89374995232</data>
+      <data key="d3">-41.73199844359999</data>
     </node>
     <node id="SBQV">
       <data key="d0">VITÓRIA DA CONQUISTA</data>
@@ -675,146 +675,146 @@
     <node id="SBTB">
       <data key="d0">ORIXIMINÁ</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-1.4897222</data>
-      <data key="d3">-56.396944</data>
+      <data key="d2">-1.489599943161</data>
+      <data key="d3">-56.396800994873</data>
     </node>
     <node id="SBJU">
       <data key="d0">JUAZEIRO DO NORTE</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-7.2191667</data>
-      <data key="d3">-39.269444</data>
+      <data key="d2">-7.21895980835</data>
+      <data key="d3">-39.270099639899996</data>
     </node>
     <node id="SBMS">
       <data key="d0">MOSSORÓ</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-5.1958333</data>
-      <data key="d3">-37.361667</data>
+      <data key="d2">-5.2019200324999995</data>
+      <data key="d3">-37.3642997742</data>
     </node>
     <node id="SBAT">
       <data key="d0">ALTA FLORESTA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-9.8663889</data>
-      <data key="d3">-56.105</data>
+      <data key="d2">-9.8663892746</data>
+      <data key="d3">-56.1049995422</data>
     </node>
     <node id="SNMZ">
       <data key="d0">PORTO DE MOZ</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-1.7413889</data>
-      <data key="d3">-52.235833</data>
+      <data key="d2">-1.7414499521255493</data>
+      <data key="d3">-52.23609924316406</data>
     </node>
     <node id="SNVS">
       <data key="d0">BREVES</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-1.6363889</data>
-      <data key="d3">-50.443333</data>
+      <data key="d2">-1.6365300416946411</data>
+      <data key="d3">-50.443599700927734</data>
     </node>
     <node id="SWJN">
       <data key="d0">JUÍNA</data>
       <data key="d1">BRASIL</data>
       <data key="d2">-11.419444</data>
-      <data key="d3">-58.71</data>
+      <data key="d3">-58.701668</data>
     </node>
     <node id="SWPI">
       <data key="d0">PARINTINS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-2.6694444</data>
-      <data key="d3">-56.771111</data>
+      <data key="d2">-2.6730198860168457</data>
+      <data key="d3">-56.777198791503906</data>
     </node>
     <node id="SWTS">
       <data key="d0">TANGARÁ DA SERRA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-14.661944</data>
-      <data key="d3">-57.443889</data>
+      <data key="d2">-14.661999702500001</data>
+      <data key="d3">-57.4435005188</data>
     </node>
     <node id="SWMW">
       <data key="d0">MAUÉS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-3.3569444</data>
-      <data key="d3">-57.712222</data>
+      <data key="d2">-3.37217</data>
+      <data key="d3">-57.7248</data>
     </node>
     <node id="SBCP">
       <data key="d0">CAMPOS DOS GOYTACAZES</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-21.701111</data>
-      <data key="d3">-41.307778</data>
+      <data key="d2">-21.698299408</data>
+      <data key="d3">-41.301700592</data>
     </node>
     <node id="SBNM">
       <data key="d0">SANTO ÂNGELO</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-28.281667</data>
-      <data key="d3">-54.168333</data>
+      <data key="d2">-28.2817</data>
+      <data key="d3">-54.169102</data>
     </node>
     <node id="SWLC">
       <data key="d0">RIO VERDE</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-17.834722</data>
-      <data key="d3">-50.956111</data>
+      <data key="d2">-17.8347225189209</data>
+      <data key="d3">-50.956111907958984</data>
     </node>
     <node id="SBCZ">
       <data key="d0">CRUZEIRO DO SUL</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-7.5994444</data>
-      <data key="d3">-72.769444</data>
+      <data key="d2">-7.59991</data>
+      <data key="d3">-72.769501</data>
     </node>
     <node id="SBRB">
       <data key="d0">RIO BRANCO</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-9.8683333</data>
-      <data key="d3">-67.898056</data>
+      <data key="d2">-9.869031</data>
+      <data key="d3">-67.893984</data>
     </node>
     <node id="SBTF">
       <data key="d0">TEFÉ</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-3.3802778</data>
-      <data key="d3">-64.725278</data>
+      <data key="d2">-3.38294005394</data>
+      <data key="d3">-64.7240982056</data>
     </node>
     <node id="SBTT">
       <data key="d0">TABATINGA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-4.2505556</data>
-      <data key="d3">-69.937778</data>
+      <data key="d2">-4.2556700706482</data>
+      <data key="d3">-69.93579864502</data>
     </node>
     <node id="SBUA">
       <data key="d0">SÃO GABRIEL DA CACHOEIRA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-0.1480556</data>
-      <data key="d3">-66.985833</data>
+      <data key="d2">-0.14835</data>
+      <data key="d3">-66.9855</data>
     </node>
     <node id="SWCA">
       <data key="d0">CARAUARI</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-4.8713889</data>
-      <data key="d3">-66.8975</data>
+      <data key="d2">-4.871520042419434</data>
+      <data key="d3">-66.89749908447266</data>
     </node>
     <node id="SWEI">
       <data key="d0">EIRUNEPÉ</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-6.6375</data>
-      <data key="d3">-69.883056</data>
+      <data key="d2">-6.639530181884766</data>
+      <data key="d3">-69.87979888916016</data>
     </node>
     <node id="SWKO">
       <data key="d0">COARI</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-4.1338889</data>
-      <data key="d3">-63.131111</data>
+      <data key="d2">-4.134059906005859</data>
+      <data key="d3">-63.132598876953125</data>
     </node>
     <node id="SWLB">
       <data key="d0">LÁBREA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-7.2788889</data>
-      <data key="d3">-64.769444</data>
+      <data key="d2">-7.278969764709473</data>
+      <data key="d3">-64.76950073242188</data>
     </node>
     <node id="SBMY">
       <data key="d0">MANICORÉ</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-5.8169444</data>
-      <data key="d3">-61.283889</data>
+      <data key="d2">-5.8113799095154</data>
+      <data key="d3">-61.278301239014</data>
     </node>
     <node id="SBPF">
       <data key="d0">PASSO FUNDO</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-28.245278</data>
-      <data key="d3">-52.328611</data>
+      <data key="d2">-28.243999</data>
+      <data key="d3">-52.326599</data>
     </node>
     <node id="GVAC">
       <data key="d0">ILHA DO SAL</data>
@@ -825,13 +825,13 @@
     <node id="SBCB">
       <data key="d0">CABO FRIO</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-22.920833</data>
-      <data key="d3">-42.071389</data>
+      <data key="d2">-22.921699523900003</data>
+      <data key="d3">-42.074298858599995</data>
     </node>
     <node id="SMJP">
       <data key="d0">ZANDERIJ</data>
       <data key="d1">SURINAME</data>
-      <data key="d2">5.4528298378</data>
+      <data key="d2">5.4528298377999995</data>
       <data key="d3">-55.1878013611</data>
     </node>
     <node id="LSZH">
@@ -862,7 +862,7 @@
       <data key="d0">ACCRA</data>
       <data key="d1">GANA</data>
       <data key="d2">5.605189800262451</data>
-      <data key="d3">-0.1667860001325607</data>
+      <data key="d3">-0.16678600013256073</data>
     </node>
     <node id="LPPR">
       <data key="d0">PORTO</data>
@@ -909,7 +909,7 @@
     <node id="PANC">
       <data key="d0">ANCHORAGE, ALASKA</data>
       <data key="d1">ESTADOS UNIDOS DA AMÉRICA</data>
-      <data key="d2">61.17440032958984</data>
+      <data key="d2">61.174400329589844</data>
       <data key="d3">-149.99600219726562</data>
     </node>
     <node id="KFLL">
@@ -963,91 +963,91 @@
     <node id="MTPP">
       <data key="d0">PORT-DE-PAIX</data>
       <data key="d1">HAITI</data>
-      <data key="d2">18.57999992370605</data>
+      <data key="d2">18.579999923706055</data>
       <data key="d3">-72.2925033569336</data>
     </node>
     <node id="SBAC">
       <data key="d0">ARACATI</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-4.5686111</data>
+      <data key="d2">-4.568611</data>
       <data key="d3">-37.804722</data>
     </node>
     <node id="SBAE">
       <data key="d0">AREALVA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-22.157778</data>
-      <data key="d3">-49.068333</data>
+      <data key="d2">-22.15778</data>
+      <data key="d3">-49.06833</data>
     </node>
     <node id="SBCN">
       <data key="d0">CALDAS NOVAS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-17.724722</data>
-      <data key="d3">-48.61</data>
+      <data key="d2">-17.725299835205</data>
+      <data key="d3">-48.607498168945</data>
     </node>
     <node id="SBDB">
       <data key="d0">BONITO</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-21.247222</data>
+      <data key="d2">-21.2473</data>
       <data key="d3">-56.4525</data>
     </node>
     <node id="SBDO">
       <data key="d0">DOURADOS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-22.200556</data>
-      <data key="d3">-54.925556</data>
+      <data key="d2">-22.22856901507285</data>
+      <data key="d3">-54.73851941940339</data>
     </node>
     <node id="SBGV">
       <data key="d0">GOVERNADOR VALADARES</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-18.896944</data>
-      <data key="d3">-41.986111</data>
+      <data key="d2">-18.89520072937</data>
+      <data key="d3">-41.982200622559</data>
     </node>
     <node id="SBJE">
       <data key="d0">CRUZ</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-2.9066667</data>
-      <data key="d3">-40.358056</data>
+      <data key="d2">-3.748169999999959</data>
+      <data key="d3">-38.448519999999974</data>
     </node>
     <node id="SBRD">
       <data key="d0">RONDONÓPOLIS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-16.588056</data>
-      <data key="d3">-54.721667</data>
+      <data key="d2">-16.46586999999994</data>
+      <data key="d3">-54.62233999999995</data>
     </node>
     <node id="SBSG">
       <data key="d0">SÃO GONÇALO DO AMARANTE</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-5.7688889</data>
-      <data key="d3">-35.366389</data>
+      <data key="d2">-5.768056</data>
+      <data key="d3">-35.376111</data>
     </node>
     <node id="SBSI">
       <data key="d0">SINOP</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-11.885</data>
-      <data key="d3">-55.586111</data>
+      <data key="d2">-15.642259999999965</data>
+      <data key="d3">-56.12584999999996</data>
     </node>
     <node id="SBSO">
       <data key="d0">SORRISO</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-12.472778</data>
-      <data key="d3">-55.668889</data>
+      <data key="d2">-12.479177</data>
+      <data key="d3">-55.672341</data>
     </node>
     <node id="SBVC">
       <data key="d0">VITÓRIA DA CONQUISTA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-14.907778</data>
-      <data key="d3">-40.914722</data>
+      <data key="d2">-14.845117237443073</data>
+      <data key="d3">-40.82990909576193</data>
     </node>
     <node id="SBZM">
       <data key="d0">GOIANÁ</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-21.513056</data>
-      <data key="d3">-43.173056</data>
+      <data key="d2">-21.513086</data>
+      <data key="d3">-43.173069</data>
     </node>
     <node id="KGUS">
       <data key="d0">PERU, INDIANA</data>
       <data key="d1">ESTADOS UNIDOS DA AMÉRICA</data>
-      <data key="d2">40.6481018066</data>
+      <data key="d2">40.648101806599996</data>
       <data key="d3">-86.1520996094</data>
     </node>
     <node id="MGGT">
@@ -1059,14 +1059,14 @@
     <node id="SBTG">
       <data key="d0">TRÊS LAGOAS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-20.751389</data>
-      <data key="d3">-51.680278</data>
+      <data key="d2">-20.767124949846014</data>
+      <data key="d3">-51.73178989520845</data>
     </node>
     <node id="SBJA">
       <data key="d0">JAGUARUNA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-28.675278</data>
-      <data key="d3">-49.060278</data>
+      <data key="d2">-28.6753</data>
+      <data key="d3">-49.0596</data>
     </node>
     <node id="TJSJ">
       <data key="d0">SAN JUAN</data>
@@ -1077,7 +1077,7 @@
     <node id="EBBR">
       <data key="d0">BRUSSELS/ZAVENTEM</data>
       <data key="d1">BÉLGICA</data>
-      <data key="d2">50.9014015198</data>
+      <data key="d2">50.901401519800004</data>
       <data key="d3">4.48443984985</data>
     </node>
     <node id="KROW">
@@ -1089,7 +1089,7 @@
     <node id="MNMG">
       <data key="d0">MANAGUA</data>
       <data key="d1">NICARÁGUA</data>
-      <data key="d2">12.14150047302246</data>
+      <data key="d2">12.141500473022461</data>
       <data key="d3">-86.16819763183594</data>
     </node>
     <node id="SPJC">
@@ -1126,7 +1126,7 @@
       <data key="d0">ALEXANDRIA, LOUISIANA</data>
       <data key="d1">ESTADOS UNIDOS DA AMÉRICA</data>
       <data key="d2">31.32740020751953</data>
-      <data key="d3">-92.54979705810548</data>
+      <data key="d3">-92.54979705810547</data>
     </node>
     <node id="OMAA">
       <data key="d0">AB DHABI INTERNATIONAL</data>
@@ -1156,13 +1156,13 @@
       <data key="d0">DOUALA</data>
       <data key="d1">CAMARÕES</data>
       <data key="d2">4.0060801506</data>
-      <data key="d3">9.71947956085</data>
+      <data key="d3">9.719479560849999</data>
     </node>
     <node id="HAAB">
       <data key="d0">ADDIS ABABA</data>
       <data key="d1">ETIÓPIA</data>
       <data key="d2">8.97789001465</data>
-      <data key="d3">38.7993011475</data>
+      <data key="d3">38.799301147499996</data>
     </node>
     <node id="EBLG">
       <data key="d0">LIÈGE</data>
@@ -1174,7 +1174,7 @@
       <data key="d0">LIBREVILLE</data>
       <data key="d1">GABÃO</data>
       <data key="d2">0.458600014448</data>
-      <data key="d3">9.4122800827</data>
+      <data key="d3">9.412280082699999</data>
     </node>
     <node id="SVSO">
       <data key="d0">SANTO DOMINGO</data>
@@ -1185,7 +1185,7 @@
     <node id="SVBM">
       <data key="d0">BARQUISIMETO</data>
       <data key="d1">VENEZUELA</data>
-      <data key="d2">10.042746543884276</data>
+      <data key="d2">10.042746543884277</data>
       <data key="d3">-69.3586196899414</data>
     </node>
     <node id="TJBQ">
@@ -1215,7 +1215,7 @@
     <node id="KBFI">
       <data key="d0">SEATTLE, WASHINGTON</data>
       <data key="d1">ESTADOS UNIDOS DA AMÉRICA</data>
-      <data key="d2">47.52999877929688</data>
+      <data key="d2">47.529998779296875</data>
       <data key="d3">-122.302001953125</data>
     </node>
     <node id="KSTL">
@@ -1257,8 +1257,8 @@
     <node id="SDSC">
       <data key="d0">SÃO CARLOS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-21.876389</data>
-      <data key="d3">-47.903333</data>
+      <data key="d2">-21.875401</data>
+      <data key="d3">-47.903703</data>
     </node>
     <node id="EGSS">
       <data key="d0">LONDON, ENGLAND</data>
@@ -1270,7 +1270,7 @@
       <data key="d0">CABO VERDE</data>
       <data key="d1">CABO VERDE</data>
       <data key="d2">14.924500465393066</data>
-      <data key="d3">-23.49349975585937</data>
+      <data key="d3">-23.493499755859375</data>
     </node>
     <node id="SKRG">
       <data key="d0">MEDELLÍN/RIONEGRO</data>
@@ -1287,26 +1287,26 @@
     <node id="SBBW">
       <data key="d0">BARRA DO GARÇAS</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-15.860833</data>
-      <data key="d3">-52.389444</data>
+      <data key="d2">-15.861300468400001</data>
+      <data key="d3">-52.3889007568</data>
     </node>
     <node id="SBJD">
       <data key="d0">JUNDIAÍ</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-23.181667</data>
-      <data key="d3">-46.943611</data>
+      <data key="d2">-23.180369</data>
+      <data key="d3">-46.944408</data>
     </node>
     <node id="SDIM">
       <data key="d0">ITANHAÉM</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-24.164722</data>
-      <data key="d3">-46.785556</data>
+      <data key="d2">-24.164722442626953</data>
+      <data key="d3">-46.78555679321289</data>
     </node>
     <node id="SDTK">
       <data key="d0">PARATY</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-23.224444</data>
-      <data key="d3">-44.720278</data>
+      <data key="d2">-23.224044</data>
+      <data key="d3">-44.723357</data>
     </node>
     <node id="SJHG">
       <data key="d0">CONFRESA</data>
@@ -1317,20 +1317,20 @@
     <node id="SNGA">
       <data key="d0">GUARAPARI</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-20.646389</data>
-      <data key="d3">-40.491667</data>
+      <data key="d2">-20.646499633800005</data>
+      <data key="d3">-40.491901397700005</data>
     </node>
     <node id="SNHS">
       <data key="d0">SERRA TALHADA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-8.0613889</data>
-      <data key="d3">-38.328611</data>
+      <data key="d2">-8.0623998642</data>
+      <data key="d3">-38.3288002014</data>
     </node>
     <node id="SNMA">
       <data key="d0">MONTE ALEGRE</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-1.9966667</data>
-      <data key="d3">-54.071389</data>
+      <data key="d2">-1.9958000183105469</data>
+      <data key="d3">-54.07419967651367</data>
     </node>
     <node id="SNRJ">
       <data key="d0">BREJO</data>
@@ -1341,14 +1341,14 @@
     <node id="SNYA">
       <data key="d0">ALMEIRIM</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-1.4791667</data>
-      <data key="d3">-52.578056</data>
+      <data key="d2">-1.4919439554214478</data>
+      <data key="d3">-52.57833480834961</data>
     </node>
     <node id="SSCN">
       <data key="d0">CANELA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-29.370556</data>
-      <data key="d3">-50.832222</data>
+      <data key="d2">-29.37019920349121</data>
+      <data key="d3">-50.832000732421875</data>
     </node>
     <node id="SSOU">
       <data key="d0">ARIPUANÃ</data>
@@ -1359,8 +1359,8 @@
     <node id="SSTE">
       <data key="d0">TORRES</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-29.415</data>
-      <data key="d3">-49.81</data>
+      <data key="d2">-29.23417999999998</data>
+      <data key="d3">-51.32977999999997</data>
     </node>
     <node id="SWHP">
       <data key="d0">ÁGUA BOA</data>
@@ -1371,7 +1371,7 @@
     <node id="SDWQ">
       <data key="d0">ALENQUER</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-1.940919999999949</data>
+      <data key="d2">-1.9409199999999487</data>
       <data key="d3">-54.73634999999996</data>
     </node>
     <node id="SBUY">
@@ -1383,8 +1383,8 @@
     <node id="SBPG">
       <data key="d0">PONTA GROSSA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-25.184444</data>
-      <data key="d3">-50.143889</data>
+      <data key="d2">-25.085599999999943</data>
+      <data key="d3">-50.178699999999935</data>
     </node>
     <node id="ZGSZ">
       <data key="d0">SHENZHEN, GUANGDONG</data>
@@ -1419,7 +1419,7 @@
     <node id="UCFM">
       <data key="d0">BISHKEK</data>
       <data key="d1">QUIRGUISTÃO</data>
-      <data key="d2">42.88434000000007</data>
+      <data key="d2">42.884340000000066</data>
       <data key="d3">74.60354000000007</data>
     </node>
     <node id="FYWH">
@@ -1461,14 +1461,14 @@
     <node id="SDNM">
       <data key="d0">NOVA MUTUM</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-13.821111</data>
-      <data key="d3">-56.038611</data>
+      <data key="d2">-22.447500228881836</data>
+      <data key="d3">-43.128334045410156</data>
     </node>
     <node id="SILC">
       <data key="d0">LUCAS DO RIO VERDE</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-13.037778</data>
-      <data key="d3">-55.950278</data>
+      <data key="d2">-13.037861</data>
+      <data key="d3">-55.95025</data>
     </node>
     <node id="SYCJ">
       <data key="d0">GEORGETOWN</data>
@@ -1485,7 +1485,7 @@
     <node id="ZBAA">
       <data key="d0">BEIJING</data>
       <data key="d1">CHINA</data>
-      <data key="d2">40.0801010131836</data>
+      <data key="d2">40.080101013183594</data>
       <data key="d3">116.58499908447266</data>
     </node>
     <node id="LMML">
@@ -1546,7 +1546,7 @@
       <data key="d0">ABIDJAN</data>
       <data key="d1">COSTA DO MARFIM</data>
       <data key="d2">5.261390209197998</data>
-      <data key="d3">-3.9262900352478023</data>
+      <data key="d3">-3.9262900352478027</data>
     </node>
     <node id="HSSS">
       <data key="d0">KHARTOUM</data>
@@ -1570,7 +1570,7 @@
       <data key="d0">TARBES</data>
       <data key="d1">FRANÇA</data>
       <data key="d2">43.1786994934082</data>
-      <data key="d3">-0.0064389999024569</data>
+      <data key="d3">-0.006438999902456999</data>
     </node>
     <node id="KVCV">
       <data key="d0">VICTORVILLE, CALIFORNIA</data>
@@ -1606,7 +1606,7 @@
       <data key="d0">JINAN, SHANDONG</data>
       <data key="d1">CHINA</data>
       <data key="d2">36.857200622558594</data>
-      <data key="d3">117.21600341796876</data>
+      <data key="d3">117.21600341796875</data>
     </node>
     <node id="KAUH">
       <data key="d0">AURORA, NEBRASKA</data>
@@ -1617,8 +1617,8 @@
     <node id="SNCX">
       <data key="d0">COLATINA</data>
       <data key="d1">BRASIL</data>
-      <data key="d2">-19.484444</data>
-      <data key="d3">-40.584444</data>
+      <data key="d2">-19.48699951171875</data>
+      <data key="d3">-40.57939910888672</data>
     </node>
     <edge source="KDFW" target="SBGR">
       <data key="d4">8</data>
