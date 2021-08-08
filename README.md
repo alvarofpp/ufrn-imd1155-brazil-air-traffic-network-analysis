@@ -1,4 +1,4 @@
-# ufrn-imd1155-brazil-air-traffic-network-analysis
+# Brazil air traffic network analysis
 [![Open in Streamlit](https://img.shields.io/badge/-Streamlit-262730?style=for-the-badge&labelColor=000000&logo=Streamlit&logoColor=white)](#)
 
 This work has as purpose to analyze under different metrics the air traffic in Brazil. Besides that, it makes it possible upload your own dataset (`.graphml`) and see all these analyses applied to him. Have fun!
@@ -12,7 +12,6 @@ Group:
 - [Marcos Vinícius Rêgo Freire](https://github.com/mvinnicius22)
   - Enrolment: 20210053533
   - E-mail: mvinnicius22@hotmail.com
-
 
 You can find a detailed approach of these metrics above:
 
