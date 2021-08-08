@@ -5,7 +5,7 @@ from views.charts import DegreeCentralityChart, ClosenessCentralityChart, \
     BetweennessCentralityChart, EigenVectorCentralityChart
 
 
-class NodeRanking(View):
+class NodeRankingView(View):
     def render(self, graphs):
         self.render_component.markdown("""
         ## Node Ranking 
