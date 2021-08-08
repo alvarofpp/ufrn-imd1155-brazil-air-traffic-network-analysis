@@ -32,6 +32,7 @@ class GraphView(View):
         cols[0].dataframe(dataframe)
         TableComponent(render_component=cols[1], headers=TableComponent.metric_headers, values=[
             METRICS['diameter'],
+            METRICS['radius'],
         ]).render()
 
     def collect_data_from_graph(self, graph) -> Dict:
