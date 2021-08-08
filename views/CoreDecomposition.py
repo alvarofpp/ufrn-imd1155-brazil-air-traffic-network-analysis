@@ -1,9 +1,10 @@
 import networkx as nx
 from .View import View
 from utils.constants import METRICS
-from views.components import TableComponent, PanelTabsBokehComponent
+from views.components import TableComponent
 from views.charts import KCoreChart, KShellChart
 import copy
+from bokeh.layouts import row
 
 
 class CoreDecomposition(View):
@@ -11,10 +12,10 @@ class CoreDecomposition(View):
         self.render_component.markdown("""
         ## Core Decomposition
         """)
-        cols = self.render_component.columns(self._columns_width)
 
-        # Column 1
-        graph_selected = cols[1].selectbox('Select the graph', options=list(graphs.keys()), key='core_decomposition')
+        # First row
+        cols = self.render_component.columns([3, 3, 3])
+        graph_selected = cols[0].selectbox('Select the graph', options=list(graphs.keys()), key='core_decomposition')
         graph = copy.deepcopy(graphs[graph_selected])
 
         # Remove self-loops
@@ -26,7 +27,7 @@ class CoreDecomposition(View):
         core_selected = cols[1].selectbox('Select the core number', options=list(cores_options))
 
         TableComponent(
-            render_component=cols[1],
+            render_component=cols[2],
             headers=TableComponent.metric_headers,
             values=[
                 METRICS['k_core'],
@@ -34,10 +35,9 @@ class CoreDecomposition(View):
             ]
         ).render()
 
-        # Column 0
+        # Second row
         graph_core = nx.k_core(copy.deepcopy(graph), core_selected, all_cores)
         graph_shell = nx.k_shell(copy.deepcopy(graph), core_selected, all_cores)
-        PanelTabsBokehComponent(render_component=cols[0]) \
-            .add_tab('K-core ({})'.format(core_selected), KCoreChart().get(graph_core)) \
-            .add_tab('K-shell ({})'.format(core_selected), KShellChart().get(graph_shell)) \
-            .render()
+
+        plot = row(KCoreChart().get(graph_core), KShellChart().get(graph_shell))
+        self.render_component.bokeh_chart(plot)
