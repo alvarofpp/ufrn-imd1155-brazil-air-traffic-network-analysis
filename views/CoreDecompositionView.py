@@ -14,7 +14,7 @@ class CoreDecompositionView(View):
         """)
 
         # First row
-        cols = self.render_component.columns([3, 3, 3])
+        cols = self.render_component.columns([5, 5])
         graph = st.session_state['graph_selected']
 
         # Remove self-loops
@@ -23,10 +23,10 @@ class CoreDecompositionView(View):
 
         all_cores = nx.core_number(graph)
         cores_options = set([core for node, core in all_cores.items()])
-        core_selected = cols[1].selectbox('Select the core number', options=list(cores_options))
+        core_selected = cols[0].selectbox('Select the core number', options=list(cores_options))
 
         TableComponent(
-            render_component=cols[2],
+            render_component=cols[1],
             headers=TableComponent.metric_headers,
             values=[
                 METRICS['k_core'],
