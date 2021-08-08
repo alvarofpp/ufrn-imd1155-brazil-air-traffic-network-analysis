@@ -3,14 +3,14 @@ from typing import Dict
 from .BokehChart import BokehChart
 
 
-class EigenVectorCentralityChart(BokehChart):
-    _title = 'Eigen Vector Centrality'
-    _attribute = 'eigen_vector_centrality'
+class EigenvectorCentralityChart(BokehChart):
+    _title = 'Eigenvector Centrality'
+    _attribute = 'eigenvector_centrality'
 
     def __init__(self, **kwargs):
         kwargs.update({
             'tooltips': [
-                ('eigen vector centrality', '@' + self._attribute)
+                ('eigenvector centrality', '@' + self._attribute)
             ],
         })
         super().__init__(**kwargs)

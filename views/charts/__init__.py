@@ -1,6 +1,6 @@
 from .DegreeCentralityChart import DegreeCentralityChart
 from .ClosenessCentralityChart import ClosenessCentralityChart
 from .BetweennessCentralityChart import BetweennessCentralityChart
-from .EigenVectorCentralityChart import EigenVectorCentralityChart
+from .EigenvectorCentralityChart import EigenvectorCentralityChart
 from .KCoreChart import KCoreChart
 from .KShellChart import KShellChart

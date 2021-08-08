@@ -2,7 +2,7 @@ from .View import View
 from views.components import TableComponent, PanelTabsBokehComponent
 from utils.constants import METRICS
 from views.charts import DegreeCentralityChart, ClosenessCentralityChart, \
-    BetweennessCentralityChart, EigenVectorCentralityChart
+    BetweennessCentralityChart, EigenvectorCentralityChart
 
 
 class NodeRankingView(View):
@@ -23,7 +23,7 @@ class NodeRankingView(View):
                 METRICS['degree_centrality'],
                 METRICS['betweenness_centrality'],
                 METRICS['closeness_centrality'],
-                METRICS['eigen_vector_centrality'],
+                METRICS['eigenvector_centrality'],
             ]
         ).render()
 
@@ -32,5 +32,5 @@ class NodeRankingView(View):
             .add_tab('Degree Centrality', DegreeCentralityChart().get(graph)) \
             .add_tab('Closeness Centrality', ClosenessCentralityChart().get(graph)) \
             .add_tab('Betweenness Centrality', BetweennessCentralityChart().get(graph)) \
-            .add_tab('Eigen Vector Centrality', EigenVectorCentralityChart().get(graph)) \
+            .add_tab('Eigenvector Centrality', EigenvectorCentralityChart().get(graph)) \
             .render()
