@@ -1,5 +1,5 @@
 from .AirportsView import AirportsView
-from .CoreDecomposition import CoreDecomposition
+from .CoreDecompositionView import CoreDecompositionView
 from .GraphView import GraphView
 from .IntroView import IntroView
 from .NodeRanking import NodeRanking

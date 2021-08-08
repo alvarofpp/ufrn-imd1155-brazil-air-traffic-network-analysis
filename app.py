@@ -1,7 +1,7 @@
 from typing import List, Dict
 import networkx as nx
 import streamlit as st
-from views import IntroView, GraphView, AirportsView, NodeRanking, CoreDecomposition
+from views import AirportsView, CoreDecompositionView, GraphView, IntroView, NodeRanking
 from views.components import SelectComponent
 from utils.constants import *
 
@@ -27,7 +27,7 @@ def get_views() -> List:
         GraphView(),
         AirportsView(),
         NodeRanking(),
-        CoreDecomposition(),
+        CoreDecompositionView(),
     ]
 
 

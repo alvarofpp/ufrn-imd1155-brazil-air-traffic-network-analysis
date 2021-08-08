@@ -7,7 +7,7 @@ from views.components import TableComponent
 from views.charts import KCoreChart, KShellChart
 
 
-class CoreDecomposition(View):
+class CoreDecompositionView(View):
     def render(self, graphs):
         self.render_component.markdown("""
         ## Core Decomposition
