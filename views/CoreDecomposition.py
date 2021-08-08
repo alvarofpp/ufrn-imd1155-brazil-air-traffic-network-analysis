@@ -1,10 +1,10 @@
+import copy
 import networkx as nx
 from .View import View
+from bokeh.layouts import row
 from utils.constants import METRICS
 from views.components import TableComponent
 from views.charts import KCoreChart, KShellChart
-import copy
-from bokeh.layouts import row
 
 
 class CoreDecomposition(View):
@@ -36,8 +36,8 @@ class CoreDecomposition(View):
         ).render()
 
         # Second row
-        graph_core = nx.k_core(copy.deepcopy(graph), core_selected, all_cores)
-        graph_shell = nx.k_shell(copy.deepcopy(graph), core_selected, all_cores)
+        graph_core = nx.k_core(graph, core_selected, all_cores)
+        graph_shell = nx.k_shell(graph, core_selected, all_cores)
 
         plot = row(KCoreChart().get(graph_core), KShellChart().get(graph_shell))
         self.render_component.bokeh_chart(plot)
