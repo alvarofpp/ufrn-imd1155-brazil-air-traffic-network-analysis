@@ -28,3 +28,82 @@ You can find a detailed approach of these metrics above:
 | `Eigenvector Centrality` | The [Eigenvector Centrality](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=ix_GsVjVc_d4) measures a node’s influence based on the **number of links** it has to other nodes in the network. |
 | `k-core` | A [k-core](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=vqlupG50r8Yf) in a network is a subset of its nodes in which all nodes have at least **k** connections to each other. |
 | `k-shell` | The [k-shell](https://colab.research.google.com/github/ivanovitchm/network_analysis/blob/main/week_06/Hubs.ipynb#scrollTo=PgYUzep5KqrU&line=5&uniqifier=1) of a graph G is the set of all nodes belonging to the k–core of G but not to the **(k+1)**–core. |
+
+
+## Run the app
+
+You can run the app in 3 different ways:
+
+- Virtual environment;
+- Docker container;
+- Docker-compose.
+
+### Virtual Environment
+
+In your environment:
+
+```shell
+# Install requirements for scripts
+pip install -r requirements.txt
+
+# (optional) If you want updates the data
+python3 extract.py
+
+# Run the app
+streamlit run app.py
+```
+
+### Docker
+
+These instructions will cover usage information and for the docker container.
+
+#### Prerequisites
+
+In order to run this app you'll need docker installed.
+
+- [Get Started](https://docs.docker.com/get-started/)
+
+#### Run
+
+Step 1:
+```shell
+# Build the docker image
+docker build -t streamlitapp:latest .
+# Or specifying a file
+docker build -t streamlitapp:latest .f Dockerfile
+```
+
+Step 2:
+```shell
+# Run a container
+docker run -p 8501:8501 streamlitapp:latest
+```
+
+### Docker-compose
+
+If you prefer to use docker-compose to run the app with others services, this is the section.
+
+#### Prerequisites
+
+See the [Docker prerequisites](#) section before this section. After that, you need to install docker-compose:
+
+- [Install Docker Compose](https://docs.docker.com/compose/install/)
+
+After installed docker-compose, create a `.env` file (you can see [`.env.example`](.env.example) as an example).
+
+#### Environment Variables
+
+- `STREAMLIT_PORT` - The port the app runs on. By default, is `8501`.
+
+#### Run
+
+```shell
+# Run the app
+docker-compose up
+```
+
+## Contributing
+Contributions are more than welcome. Fork, improve and make a pull request. For bugs, ideas for improvement or other, please create an [issue](https://github.com/alvarofpp/ufrn-imd1155-brazil-air-traffic-network-analysis/issues).
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
