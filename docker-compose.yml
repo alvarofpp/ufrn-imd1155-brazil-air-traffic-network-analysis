@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    ports:
+      - "${STREAMLIT_PORT}:8501"
+
+  app_from_image:
+    image: streamlitapp:latest
+    network_mode: host
