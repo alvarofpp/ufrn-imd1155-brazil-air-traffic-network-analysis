@@ -3,8 +3,9 @@ from typing import List, Dict
 import networkx as nx
 import streamlit as st
 from views import AirportsView, CoreDecompositionView, GraphView, IntroView, NodeRankingView
-from views.components import SelectComponent
+from views.components import SelectComponent, GraphSelectComponent
 from utils.constants import *
+from utils.SessionState import SessionState
 
 
 @st.cache()
@@ -36,6 +37,12 @@ def get_views() -> List:
     ]
 
 
+def render_pages():
+    for page in get_views():
+        page.render()
+        st.markdown('----------')
+
+
 def mode_my_graph():
     graph = None
     stub_content = get_stub_graphml()
@@ -47,11 +54,9 @@ def mode_my_graph():
         graph = nx.parse_graphml(file_uploaded.getbuffer())
 
     if graph:
-        for page in get_views():
-            page.render({
-                'my_graph': graph,
-            })
-            st.markdown('----------')
+        SessionState.set_graphs_to_session({
+            'my_graph': graph,
+        })
 
 
 def mode_app(data):
@@ -61,11 +66,7 @@ def mode_app(data):
         graphs[year] = st.sidebar.checkbox(year)
 
     if sum(graphs.values()) > 0:
-        graphs_data = {year: data[year] for year, value in graphs.items() if value}
-
-        for page in get_views():
-            page.render(graphs_data)
-            st.markdown('----------')
+        SessionState.set_graphs_to_session({year: data[year] for year, value in graphs.items() if value})
 
 
 def main():
@@ -73,7 +74,9 @@ def main():
         page_title='Brazil air traffic network analysis',
         layout='wide'
     )
+    # Delete all the items in Session state
     data = copy.deepcopy(get_data())
+
     st.title('Brazil air traffic network analysis')
     IntroView().render()
 
@@ -81,15 +84,20 @@ def main():
     # Select the graph that you want to analyze
     You can use a existent graph or import your graph to app.
     """)
-    data_mode_selected = SelectComponent({
+    mode_selected = SelectComponent({
         BASE_APP: 'Use existent graphs in the app',
         BASE_MY_GRAPH: 'Import my graph',
     }, render_component=st.sidebar).render('Select the base')
+    SessionState.change_mode(mode_selected)
 
-    if data_mode_selected == BASE_APP:
+    if mode_selected == BASE_APP:
         mode_app(data)
     else:
         mode_my_graph()
+
+    if SessionState.can_render_pages():
+        GraphSelectComponent(render_component=st.sidebar).render()
+        render_pages()
 
 
 if __name__ == "__main__":

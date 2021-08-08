@@ -1,4 +1,5 @@
 from .View import View
+import streamlit as st
 from views.components import TableComponent, PanelTabsBokehComponent
 from utils.constants import METRICS
 from views.charts import DegreeCentralityChart, ClosenessCentralityChart, \
@@ -6,15 +7,14 @@ from views.charts import DegreeCentralityChart, ClosenessCentralityChart, \
 
 
 class NodeRankingView(View):
-    def render(self, graphs):
+    def render(self):
         self.render_component.markdown("""
         ## Node Ranking 
         """)
         cols = self.render_component.columns(self._columns_width)
 
         # Column 1
-        graph_selected = cols[1].selectbox('Select the graph', options=list(graphs.keys()), key='node_ranking')
-        graph = graphs[graph_selected]
+        graph = st.session_state['graph_selected']
 
         TableComponent(
             render_component=cols[1],

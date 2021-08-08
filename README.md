@@ -13,6 +13,8 @@ Group:
   - Enrolment: 20210053533
   - E-mail: mvinnicius22@hotmail.com
 
+You can find the dataset used in this work in [`alvarofpp/dataset-flights-brazil`](https://github.com/alvarofpp/dataset-flights-brazil).
+
 You can find a detailed approach of these metrics above:
 
 | Metric | Description |

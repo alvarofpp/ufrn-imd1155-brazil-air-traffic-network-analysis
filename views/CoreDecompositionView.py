@@ -1,6 +1,6 @@
-import copy
 import networkx as nx
 from .View import View
+import streamlit as st
 from bokeh.layouts import row
 from utils.constants import METRICS
 from views.components import TableComponent
@@ -8,15 +8,14 @@ from views.charts import KCoreChart, KShellChart
 
 
 class CoreDecompositionView(View):
-    def render(self, graphs):
+    def render(self):
         self.render_component.markdown("""
         ## Core Decomposition
         """)
 
         # First row
         cols = self.render_component.columns([3, 3, 3])
-        graph_selected = cols[0].selectbox('Select the graph', options=list(graphs.keys()), key='core_decomposition')
-        graph = copy.deepcopy(graphs[graph_selected])
+        graph = st.session_state['graph_selected']
 
         # Remove self-loops
         if len(list(nx.selfloop_edges(graph))) > 0:

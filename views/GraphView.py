@@ -1,5 +1,6 @@
 import pandas as pd
 import networkx as nx
+import streamlit as st
 from typing import Dict
 from .View import View
 from views.components import TableComponent
@@ -7,7 +8,13 @@ from utils.constants import METRICS
 
 
 class GraphView(View):
-    def render(self, graphs):
+    def render(self):
+        if 'graphs' not in st.session_state.keys():
+            return
+        if len(st.session_state['graphs']) == 0:
+            return
+
+        graphs = st.session_state['graphs']
         data = {}
 
         for year, graph in graphs.items():

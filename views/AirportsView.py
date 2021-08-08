@@ -1,17 +1,17 @@
 from .View import View
+import streamlit as st
 from views.components import TableComponent, AirportsMapComponent
 
 
 class AirportsView(View):
-    def render(self, graphs):
+    def render(self):
         self.render_component.markdown("""
         ## Airports visualization 
         """)
         cols = self.render_component.columns([6, 3, 3])
 
         # Column 1
-        graph_selected = cols[1].selectbox('Select the graph', options=list(graphs.keys()), key='airports')
-        graph = graphs[graph_selected]
+        graph = st.session_state['graph_selected']
 
         degrees = sorted(graph.degree, key=lambda x: x[1], reverse=True)
         degrees = list(degrees)

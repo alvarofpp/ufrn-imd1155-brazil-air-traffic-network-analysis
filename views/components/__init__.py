@@ -1,4 +1,5 @@
 from .AirportsMapComponent import AirportsMapComponent
+from .GraphSelectComponent import GraphSelectComponent
 from .MapMultiLayerComponent import MapMultiLayerComponent
 from .PanelTabsBokehComponent import PanelTabsBokehComponent
 from .SelectComponent import SelectComponent
