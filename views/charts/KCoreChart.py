@@ -1,9 +1,9 @@
 import networkx as nx
 from typing import Dict
-from .CentralityChart import CentralityChart
+from .BokehChart import BokehChart
 
 
-class KCoreChart(CentralityChart):
+class KCoreChart(BokehChart):
     _title = 'K-score'
     _attribute = 'k_core'
 

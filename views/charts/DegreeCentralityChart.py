@@ -1,9 +1,9 @@
 import networkx as nx
 from typing import Dict
-from .CentralityChart import CentralityChart
+from .BokehChart import BokehChart
 
 
-class DegreeCentralityChart(CentralityChart):
+class DegreeCentralityChart(BokehChart):
     _title = 'Degree Centrality'
     _attribute = 'degree_centrality'
 

@@ -1,9 +1,9 @@
 import networkx as nx
 from typing import Dict
-from .CentralityChart import CentralityChart
+from .BokehChart import BokehChart
 
 
-class ClosenessCentralityChart(CentralityChart):
+class ClosenessCentralityChart(BokehChart):
     _title = 'Closeness Centrality'
     _attribute = 'closeness_centrality'
 

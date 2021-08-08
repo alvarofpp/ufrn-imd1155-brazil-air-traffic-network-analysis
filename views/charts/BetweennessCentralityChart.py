@@ -1,9 +1,9 @@
 import networkx as nx
 from typing import Dict
-from .CentralityChart import CentralityChart
+from .BokehChart import BokehChart
 
 
-class BetweennessCentralityChart(CentralityChart):
+class BetweennessCentralityChart(BokehChart):
     _title = 'Betweenness Centrality'
     _attribute = 'betweenness_centrality'
 

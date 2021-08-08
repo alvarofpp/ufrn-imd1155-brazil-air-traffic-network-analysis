@@ -1,9 +1,9 @@
 import networkx as nx
 from typing import Dict
-from .CentralityChart import CentralityChart
+from .BokehChart import BokehChart
 
 
-class KShellChart(CentralityChart):
+class KShellChart(BokehChart):
     _title = 'K-shell'
     _attribute = 'k_shell'
 

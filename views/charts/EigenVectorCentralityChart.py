@@ -1,9 +1,9 @@
 import networkx as nx
 from typing import Dict
-from .CentralityChart import CentralityChart
+from .BokehChart import BokehChart
 
 
-class EigenVectorCentralityChart(CentralityChart):
+class EigenVectorCentralityChart(BokehChart):
     _title = 'Eigen Vector Centrality'
     _attribute = 'eigen_vector_centrality'
 

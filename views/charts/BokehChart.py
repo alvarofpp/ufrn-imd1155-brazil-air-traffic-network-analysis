@@ -1,5 +1,6 @@
 import abc
 import copy
+import uuid
 from typing import List, Tuple
 import networkx as nx
 import bokeh.plotting
@@ -9,7 +10,7 @@ from bokeh.transform import linear_cmap
 from bokeh.models import Circle, HoverTool, ColorBar, LogColorMapper, MultiLine
 
 
-class CentralityChart(abc.ABC):
+class BokehChart(abc.ABC):
     _methods = [
         'manipulate_data',
     ]
@@ -87,7 +88,9 @@ class CentralityChart(abc.ABC):
         title = self._title if self._title is not None else ''
         return bokeh.plotting.figure(title=title,
                                      x_range=(-1.1, 1.1),
-                                     y_range=(-1.1, 1.1))
+                                     y_range=(-1.1, 1.1),
+                                     id=str(uuid.uuid4())
+                                     )
 
     def _get_hover(self) -> HoverTool:
         return HoverTool(tooltips=self.tooltips)
