@@ -87,8 +87,8 @@ class BokehChart(abc.ABC):
     def _get_figure(self):
         title = self._title if self._title is not None else ''
         return bokeh.plotting.figure(title=title,
-                                     x_range=(-1.1, 1.1),
-                                     y_range=(-1.1, 1.1),
+                                     x_range=(-3.1, 3.1),
+                                     y_range=(-3.1, 3.1),
                                      id=str(uuid.uuid4())
                                      )
 
