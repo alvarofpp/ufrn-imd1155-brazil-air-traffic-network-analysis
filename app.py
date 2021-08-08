@@ -57,6 +57,8 @@ def mode_my_graph():
         SessionState.set_graphs_to_session({
             'my_graph': graph,
         })
+    else:
+        SessionState.set_graphs_to_session({})
 
 
 def mode_app(data):
