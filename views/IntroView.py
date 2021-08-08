@@ -18,6 +18,7 @@ class IntroView(View):
         [Marcos Vinícius Rêgo Freire](https://github.com/mvinnicius22).
         
         [![Github](https://img.shields.io/badge/-Github-181717?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/alvarofpp/ufrn-imd1155-brazil-air-traffic-network-analysis)
+        [![Medium](https://img.shields.io/badge/-Medium-03a57a?style=for-the-badge&labelColor=000000&logo=Medium&logoColor=white)](https://medium.com/@mvinnicius22/air-traffic-network-analysis-976ad48f048c)
 
         ----------
         """)

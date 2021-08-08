@@ -1,5 +1,6 @@
 # Brazil air traffic network analysis
-[![Open in Streamlit](https://img.shields.io/badge/-Streamlit-262730?style=for-the-badge&labelColor=000000&logo=Streamlit&logoColor=white)](#)
+[![Open in Streamlit](https://img.shields.io/badge/-Streamlit-262730?style=for-the-badge&labelColor=000000&logo=Streamlit&logoColor=white)](https://share.streamlit.io/alvarofpp/ufrn-imd1155-brazil-air-traffic-network-analysis/main/app.py)
+[![Medium](https://img.shields.io/badge/-Medium-03a57a?style=for-the-badge&labelColor=000000&logo=Medium&logoColor=white)](https://medium.com/@mvinnicius22/air-traffic-network-analysis-976ad48f048c)
 
 This work has as purpose to analyze under different metrics the air traffic in Brazil. Besides that, it makes it possible upload your own dataset (`.graphml`) and see all these analyses applied to him. Have fun!
 
@@ -85,7 +86,7 @@ If you prefer to use docker-compose to run the app with others services, this is
 
 #### Prerequisites
 
-See the [Docker prerequisites](#) section before this section. After that, you need to install docker-compose:
+See the [Docker prerequisites](#prerequisites) section before this section. After that, you need to install docker-compose:
 
 - [Install Docker Compose](https://docs.docker.com/compose/install/)
 
